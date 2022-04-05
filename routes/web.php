@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,11 @@ Route::get('/faqs', [HomeController::class,'faqs'])->name('faqs');
 Route::get('/sign-in', [HomeController::class,'signin'])->name('sign-in');
 Route::get('/sign-up', [HomeController::class,'signup'])->name('sign-up');
 Route::get('/contact-us', [HomeController::class,'contactus'])->name('contact-us');
+
+// ############### Admin Panel ##################
+Route::get('/admin', [AdminHomeController::class,'index'])->name('admin');
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
