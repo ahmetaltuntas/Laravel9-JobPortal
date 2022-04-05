@@ -2,10 +2,7 @@
 
 @section('title', 'Job Portal')
 
-@section('sidebar')
-    @parent
 
-@endsection
 
 @section('content')
 
@@ -112,85 +109,159 @@
         <div class="pxp-hero-right-bg-card pxp-has-animation"></div>
     </section>
 
-    <section class="mt-100">
-        <div class="pxp-container">
-            <h2 class="pxp-section-h2 text-center">Search by Category</h2>
-            <p class="pxp-text-light text-center">Search your career opportunity with our categories</p>
 
-            <div class="row mt-4 mt-md-5 pxp-animate-in pxp-animate-in-top">
-                <div class="col-12 col-md-4 col-lg-3 col-xxl-2 pxp-categories-card-1-container">
-                    <a href="jobs-list-1.html" class="pxp-categories-card-1">
-                        <div class="pxp-categories-card-1-icon-container">
-                            <div class="pxp-categories-card-1-icon">
-                                <span class="fa fa-pie-chart"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-1-title">Business Development</div>
-                        <div class="pxp-categories-card-1-subtitle">139 open positions</div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4 col-lg-3 col-xxl-2 pxp-categories-card-1-container">
-                    <a href="jobs-list-1.html" class="pxp-categories-card-1">
-                        <div class="pxp-categories-card-1-icon-container">
-                            <div class="pxp-categories-card-1-icon">
-                                <span class="fa fa-bullhorn"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-1-title">Marketing & Communication</div>
-                        <div class="pxp-categories-card-1-subtitle">366 open positions</div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4 col-lg-3 col-xxl-2 pxp-categories-card-1-container">
-                    <a href="jobs-list-1.html" class="pxp-categories-card-1">
-                        <div class="pxp-categories-card-1-icon-container">
-                            <div class="pxp-categories-card-1-icon">
-                                <span class="fa fa-address-card-o"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-1-title">Human Resources</div>
-                        <div class="pxp-categories-card-1-subtitle">435 open positions</div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4 col-lg-3 col-xxl-2 pxp-categories-card-1-container">
-                    <a href="jobs-list-1.html" class="pxp-categories-card-1">
-                        <div class="pxp-categories-card-1-icon-container">
-                            <div class="pxp-categories-card-1-icon">
-                                <span class="fa fa-calendar-o"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-1-title">Project Management</div>
-                        <div class="pxp-categories-card-1-subtitle">324 open positions</div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4 col-lg-3 col-xxl-2 pxp-categories-card-1-container">
-                    <a href="jobs-list-1.html" class="pxp-categories-card-1">
-                        <div class="pxp-categories-card-1-icon-container">
-                            <div class="pxp-categories-card-1-icon">
-                                <span class="fa fa-comments-o"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-1-title">Customer Service</div>
-                        <div class="pxp-categories-card-1-subtitle">39 open positions</div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4 col-lg-3 col-xxl-2 pxp-categories-card-1-container">
-                    <a href="jobs-list-1.html" class="pxp-categories-card-1">
-                        <div class="pxp-categories-card-1-icon-container">
-                            <div class="pxp-categories-card-1-icon">
-                                <span class="fa fa-terminal"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-1-title">Software Engineering</div>
-                        <div class="pxp-categories-card-1-subtitle">439 open positions</div>
-                    </a>
-                </div>
+    <div class="pxp-container">
+        <div class="row justify-content-between align-items-end">
+            <div class="text-center">
+                <h2 class="pxp-section-h2"><br>Search by Category</h2>
+                <p class="pxp-text-light">Search your career opportunity with our categories</p>
             </div>
-
-            <div class="mt-4 mt-md-5 text-center pxp-animate-in pxp-animate-in-top">
-                <a href="jobs-list-1.html" class="btn rounded-pill pxp-section-cta">All Categories<span class="fa fa-angle-right"></span></a>
+            <div class="col-auto">
+                <div class="text-right">
+                    <a href="jobs-list-1.html" class="btn pxp-section-cta-o">All Categories<span class="fa fa-angle-right"></span></a>
+                </div>
             </div>
         </div>
-    </section>
+
+        <div class="pxp-categories-carousel owl-carousel mt-4 mt-md-5 pxp-animate-in pxp-animate-in-top">
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-pie-chart"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Business Development</div>
+                <div class="pxp-categories-card-2-subtitle">139 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-bullhorn"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Marketing & Communication</div>
+                <div class="pxp-categories-card-2-subtitle">366 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-address-card-o"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Human Resources</div>
+                <div class="pxp-categories-card-2-subtitle">435 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-calendar-o"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Project Management</div>
+                <div class="pxp-categories-card-2-subtitle">324 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-comments-o"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Customer Service</div>
+                <div class="pxp-categories-card-2-subtitle">39 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-terminal"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Software Engineering</div>
+                <div class="pxp-categories-card-2-subtitle">439 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-bank"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Finance</div>
+                <div class="pxp-categories-card-2-subtitle">139 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-building-o"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Construction</div>
+                <div class="pxp-categories-card-2-subtitle">366 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-stethoscope"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Healtcare</div>
+                <div class="pxp-categories-card-2-subtitle">435 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-pie-chart"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Business Development</div>
+                <div class="pxp-categories-card-2-subtitle">139 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-bullhorn"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Marketing & Communication</div>
+                <div class="pxp-categories-card-2-subtitle">366 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-address-card-o"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Human Resources</div>
+                <div class="pxp-categories-card-2-subtitle">435 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-calendar-o"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Project Management</div>
+                <div class="pxp-categories-card-2-subtitle">324 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-comments-o"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Customer Service</div>
+                <div class="pxp-categories-card-2-subtitle">39 open positions</div>
+            </a>
+            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                <div class="pxp-categories-card-2-icon-container">
+                    <div class="pxp-categories-card-2-icon">
+                        <span class="fa fa-terminal"></span>
+                    </div>
+                </div>
+                <div class="pxp-categories-card-2-title">Software Engineering</div>
+                <div class="pxp-categories-card-2-subtitle">439 open positions</div>
+            </a>
+        </div>
+    </div>
+
 
     <section class="mt-100 pt-100 pb-100" style="background-color: var(--pxpSecondaryColorLight);">
         <div class="pxp-container">
@@ -536,6 +607,63 @@
                             <div class="pxp-cities-card-2-jobs">144 open positions</div>
                         </div>
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-100">
+        <div class="pxp-container">
+            <h2 class="pxp-section-h2 text-center">Why Customers Love Us</h2>
+            <p class="pxp-text-light text-center">What our customers say about us</p>
+
+            <div class="pxp-testimonials-1">
+                <div class="pxp-testimonials-1-circles d-none d-md-block">
+                    <div class="pxp-testimonials-1-circles-item pxp-item-1 pxp-cover pxp-animate-in pxp-animate-bounce" style="background-image: url({{asset("assets")}}/images/customer-1.png);"></div>
+                    <div class="pxp-testimonials-1-circles-item pxp-item-2 pxp-animate-in pxp-animate-bounce"></div>
+                    <div class="pxp-testimonials-1-circles-item pxp-item-3 pxp-animate-in pxp-animate-bounce"></div>
+                    <div class="pxp-testimonials-1-circles-item pxp-item-4 pxp-cover pxp-animate-in pxp-animate-bounce" style="background-image: url({{asset("assets")}}/images/customer-2.png);"></div>
+                    <div class="pxp-testimonials-1-circles-item pxp-item-5 pxp-cover pxp-animate-in pxp-animate-bounce" style="background-image: url({{asset("assets")}}/images/customer-3.png);"></div>
+                    <div class="pxp-testimonials-1-circles-item pxp-item-6 pxp-animate-in pxp-animate-bounce"></div>
+                    <div class="pxp-testimonials-1-circles-item pxp-item-7 pxp-cover pxp-animate-in pxp-animate-bounce" style="background-image: url({{asset("assets")}}/images/customer-4.png);"></div>
+                    <div class="pxp-testimonials-1-circles-item pxp-item-8 pxp-animate-in pxp-animate-bounce"></div>
+                    <div class="pxp-testimonials-1-circles-item pxp-item-9 pxp-cover pxp-animate-in pxp-animate-bounce" style="background-image: url({{asset("assets")}}/images/customer-5.png);"></div>
+                    <div class="pxp-testimonials-1-circles-item pxp-item-10 pxp-cover pxp-animate-in pxp-animate-bounce" style="background-image: url({{asset("assets")}}/images/customer-6.png);"></div>
+                </div>
+
+                <div class="pxp-testimonials-1-carousel-container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-10 col-md-6 col-lg-6 col-xl-5 col-xxl-4">
+                            <div class="pxp-testimonials-1-carousel pxp-animate-in pxp-animate-in-top">
+                                <div id="pxpTestimonials1Carousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item text-center active">
+                                            <div class="pxp-testimonials-1-carousel-item-text">Jobster is an ever-changing workplace, striving to innovate by bringing employers and candidates together. We are dedicated to improving our clients’ lives as well as our own employees.</div>
+                                            <div class="pxp-testimonials-1-carousel-item-name">Susanne Weil</div>
+                                            <div class="pxp-testimonials-1-carousel-item-company">Illuminate Studio</div>
+                                        </div>
+                                        <div class="carousel-item text-center">
+                                            <div class="pxp-testimonials-1-carousel-item-text">Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success.</div>
+                                            <div class="pxp-testimonials-1-carousel-item-name">Kenneth Spiers</div>
+                                            <div class="pxp-testimonials-1-carousel-item-company">Syspresoft</div>
+                                        </div>
+                                        <div class="carousel-item text-center">
+                                            <div class="pxp-testimonials-1-carousel-item-text">Jobster is an ever-changing workplace, striving to innovate by bringing employers and candidates together. We are dedicated to improving our clients’ lives as well as our own employees.</div>
+                                            <div class="pxp-testimonials-1-carousel-item-name">Rebecca Eason</div>
+                                            <div class="pxp-testimonials-1-carousel-item-company">Craftgenics</div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#pxpTestimonials1Carousel" data-bs-slide="prev">
+                                        <span class="fa fa-angle-left" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#pxpTestimonials1Carousel" data-bs-slide="next">
+                                        <span class="fa fa-angle-right" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

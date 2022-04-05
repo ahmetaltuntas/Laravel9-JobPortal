@@ -21,9 +21,6 @@
 <body>
 @include('home.header')
 
-@section('sidebar')
-
-@show
 
 
 @yield('content')
