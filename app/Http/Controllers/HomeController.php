@@ -19,4 +19,13 @@ class HomeController extends Controller
     public function faqs(){
         return view('home.faqs');
     }
+    public function signin(){
+        return view('home.sign-in');
+    }
+    public function signup(){
+        return view('home.sign-up');
+    }
+    public function contactus(){
+        return view('home.contact-us');
+    }
 }

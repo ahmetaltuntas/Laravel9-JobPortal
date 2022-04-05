@@ -3,7 +3,7 @@
     <div class="pxp-container">
         <div class="pxp-header-container">
             <div class="pxp-logo">
-                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                <a href="/" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
             </div>
             <div class="pxp-nav-trigger navbar d-xl-none flex-fill">
                 <a role="button" data-bs-toggle="offcanvas" data-bs-target="#pxpMobileNav" aria-controls="pxpMobileNav">
@@ -127,101 +127,8 @@
             <nav class="pxp-nav dropdown-hover-all d-none d-xl-block">
                 <ul>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Home</a>
-                        <ul class="dropdown-menu">
-                            <li class="pxp-dropdown-body">
-                                <div class="pxp-dropdown-layout">
-                                    <div class="pxp-dropdown-header">Home Page Versions</div>
-                                    <div class="row gx-5 pxp-dropdown-lists">
-                                        <div class="col-auto pxp-dropdown-list">
-                                            <ul>
-                                                <li>
-                                                    <a href="index-2.html" class="pxp-has-icon">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <img src="{{asset("assets")}}/images/index-1-nav-icon%402x.png" alt="Hero with Animated Cards">
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Hero with Animated Cards
-                                                            <span>Home page version 1</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="index-3.html" class="pxp-has-icon">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <img src="{{asset("assets")}}/images/index-2-nav-icon%402x.png" alt="Center Image Rotator Hero">
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Center Image Rotator Hero
-                                                            <span>Home page version 2</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="index-4.html" class="pxp-has-icon">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <img src="{{asset("assets")}}/images/index-3-nav-icon%402x.png" alt="Hero with Illustration">
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Hero with Illustration
-                                                            <span>Home page version 3</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="index-5.html" class="pxp-has-icon">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <img src="{{asset("assets")}}/images/index-4-nav-icon%402x.png" alt="Boxed Hero with Animation">
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Boxed Hero with Animation
-                                                            <span>Home page version 4</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-auto pxp-dropdown-list">
-                                            <ul>
-                                                <li>
-                                                    <a href="index-6.html" class="pxp-has-icon">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <img src="{{asset("assets")}}/images/index-5-nav-icon%402x.png" alt="Full Image Background Hero">
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Full Image Background Hero
-                                                            <span>Home page version 5</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="index-7.html" class="pxp-has-icon">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <img src="{{asset("assets")}}/images/index-6-nav-icon%402x.png" alt="Full Image with Top Search">
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Full Image with Top Search
-                                                            <span>Home page version 6</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="index-8.html" class="pxp-has-icon">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <img src="{{asset("assets")}}/images/index-7-nav-icon%402x.png" alt="Hero With Image Card">
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Hero With Image Card
-                                                            <span>Home page version 7</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                        <a href="/" class="dropdown-toggle">Home</a>
+
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Find Jobs</a>
