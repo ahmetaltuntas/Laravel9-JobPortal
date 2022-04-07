@@ -108,7 +108,7 @@
 
 /*-------------------------------------------------------------------*/
 /* === Import template variables === */
-@import './variables';
+@import 'variables';
 
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
@@ -202,10 +202,10 @@
 @import "components/plugin-overrides/jquery-file-upload";
 @import "components/plugin-overrides/js-grid";
 @import "components/plugin-overrides/jvectormap";
-@import "components/plugin-overrides/justguage.scss";
+@import "components/plugin-overrides/justguage";
 @import "components/plugin-overrides/light-gallery";
 @import "components/plugin-overrides/listify";
-@import "components/plugin-overrides/morris.scss";
+@import "components/plugin-overrides/morris";
 @import "components/plugin-overrides/no-ui-slider";
 @import "components/plugin-overrides/owl-carousel";
 @import "components/plugin-overrides/progressbar-js";
@@ -228,7 +228,7 @@
 /* === Landing screens === */
 @import "components/landing-screens/auth";
 
-@import './navbar';
-@import './sidebar';
-@import './layouts';
-@import './vertical/vertical-wrapper';
+@import 'navbar';
+@import 'sidebar';
+@import 'layouts';
+@import 'vertical/vertical-wrapper';
