@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
+use App\Http\Controllers\AdminPanel\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,9 @@ Route::get('/contact-us', [HomeController::class,'contactus'])->name('contact-us
 
 // ############### Admin Panel ##################
 Route::get('/admin', [AdminHomeController::class,'index'])->name('admin');
+// ############### Admin Category ##################
+Route::get('/admin/category', [CategoryController::class,'index'])->name('admin_category');
+Route::get('/admin/category/create', [CategoryController::class,'create'])->name('admin_category_create');
 
 
 
