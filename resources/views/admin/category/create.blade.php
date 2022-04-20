@@ -47,24 +47,24 @@
                             <form class="row g-3" action="/admin/category/store" method="post">
                                 @csrf
                                 <div class="row-md-6">
-                                    <label for="inputTitle" class="form-label">Title</label>
-                                    <input type="text" class="form-control" name="inputTitle">
+                                    <label for="title" class="form-label">Title</label>
+                                    <input type="text" class="form-control" name="title">
                                 </div>
                                 <div class="row-md-6">
-                                    <label for="inputKeywords" class="form-label">Keywords</label>
-                                    <input type="text" class="form-control" name="inputKeywords">
+                                    <label for="keywords" class="form-label">Keywords</label>
+                                    <input type="text" class="form-control" name="keywords">
                                 </div>
                                 <div class="row-md-6">
-                                    <label for="inputDescription" class="form-label">Description</label>
-                                    <input type="text" class="form-control" name="inputDescription">
+                                    <label for="description" class="form-label">Description</label>
+                                    <input type="text" class="form-control" name="description">
                                 </div>
                                 <div>
-                                    <label for="formImage" class="form-label">Image</label>
-                                    <input class="form-control" type="file" name="formImage">
+                                    <label for="image" class="form-label">Image</label>
+                                    <input class="form-control" type="file" name="image">
                                 </div>
                                 <div class="row-md-6">
-                                    <label for="inputStatus" class="form-label">Status</label>
-                                    <select id="inputStatus" class="form-select">
+                                    <label for="status" class="form-label">Status</label>
+                                    <select name="status" class="form-select">
                                         <option selected="">True</option>
                                         <option>False</option>
                                     </select>
