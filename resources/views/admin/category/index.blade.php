@@ -8,54 +8,61 @@
     <!--start page wrapper -->
     <div class="page-wrapper">
         <div class="page-content">
+            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                <div class="breadcrumb-title pe-3">Home</div>
+                <div class="ps-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0 p-0">
+                            <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Category List</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="example2" class="table table-striped table-bordered">
                             <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Id</th>
+                                <th>Title</th>
+                                <th>Keywords</th>
+                                <th>Description</th>
+                                <th>Image</th>
+                                <th>Status</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                                <th>Show</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011/04/25</td>
-                                <td>$320,800</td>
+                            @foreach($data as $rs)
+                            <tr style="text-align: center; vertical-align: middle">
+                                <td>{{$rs->id}}</td>
+                                <td>{{$rs->title}}</td>
+                                <td>{{$rs->keywords}}</td>
+                                <td>{{$rs->description}}</td>
+                                <td>{{$rs->image}}</td>
+                                <td>{{$rs->status}}</td>
+                                <td><button type="button" class="btn btn-outline-success active"><a style="color: white" href="/admin/category/edit{{$rs->id}}">Edit</a></button></td>
+                                <td><button type="button" class="btn btn-outline-danger active"><a style="color: white" href="/admin/category/delete{{$rs->id}}">Delete</a></button></td>
+                                <td><button type="button" class="btn btn-outline-info active"><a style="color: black" href="/admin/category/show{{$rs->id}}">Show</a></button></td>
                             </tr>
-                            <tr>
-                                <td>Garrett Winters</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                                <td>2011/07/25</td>
-                                <td>$170,750</td>
-                            </tr>
-                            <tr>
-                                <td>Ashton Cox</td>
-                                <td>Junior Technical Author</td>
-                                <td>San Francisco</td>
-                                <td>66</td>
-                                <td>2009/01/12</td>
-                                <td>$86,000</td>
-                            </tr>
+                            @endforeach
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Id</th>
+                                <th>Title</th>
+                                <th>Keywords</th>
+                                <th>Description</th>
+                                <th>Image</th>
+                                <th>Status</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                                <th>Show</th>
                             </tr>
                             </tfoot>
                         </table>
