@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title', 'Edit Category')
+@section('title', 'Edit Category: '.$data->title)
 
 
 
@@ -41,22 +41,22 @@
                             <div class="card-title d-flex align-items-center">
                                 <div><i class="bx bxs-user me-1 font-22 text-primary"></i>
                                 </div>
-                                <h5 class="mb-0 text-primary">Edit Category</h5>
+                                <h5 class="mb-0 text-primary">Edit Category: {{$data->title}}</h5>
                             </div>
                             <hr>
-                            <form class="row g-3" action="/admin/category/store" method="post">
+                            <form class="row g-3" action="/admin/category/update/{{$data->id}}" method="post">
                                 @csrf
                                 <div class="row-md-6">
                                     <label for="title" class="form-label">Title</label>
-                                    <input type="text" class="form-control" name="title">
+                                    <input type="text" class="form-control" name="title" value="{{$data->title}}">
                                 </div>
                                 <div class="row-md-6">
                                     <label for="keywords" class="form-label">Keywords</label>
-                                    <input type="text" class="form-control" name="keywords">
+                                    <input type="text" class="form-control" name="keywords" value="{{$data->keywords}}">
                                 </div>
                                 <div class="row-md-6">
                                     <label for="description" class="form-label">Description</label>
-                                    <input type="text" class="form-control" name="description">
+                                    <input type="text" class="form-control" name="description" value="{{$data->description}}">
                                 </div>
                                 <div>
                                     <label for="image" class="form-label">Image</label>
@@ -65,12 +65,13 @@
                                 <div class="row-md-6">
                                     <label for="status" class="form-label">Status</label>
                                     <select name="status" class="form-select">
-                                        <option selected="">True</option>
+                                        <option selected="">{{$data->status}}</option>
+                                        <option>True</option>
                                         <option>False</option>
                                     </select>
                                 </div>
                                 <div class="row-12">
-                                    <button type="submit" class="btn btn-primary px-5">Save</button>
+                                    <button type="submit" class="btn btn-primary px-5">Update</button>
                                 </div>
                             </form>
                         </div>

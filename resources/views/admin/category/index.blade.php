@@ -39,7 +39,7 @@
                             </thead>
                             <tbody>
                             @foreach($data as $rs)
-                            <tr style="text-align: center; vertical-align: middle">
+                            <tr style="text-align: center; vertical-align: middle;">
                                 <td>{{$rs->id}}</td>
                                 <td>{{$rs->title}}</td>
                                 <td>{{$rs->keywords}}</td>
