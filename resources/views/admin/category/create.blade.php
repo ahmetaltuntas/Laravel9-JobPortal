@@ -44,7 +44,7 @@
                                 <h5 class="mb-0 text-primary">Add Category</h5>
                             </div>
                             <hr>
-                            <form class="row g-3" action="{{route('admin.category.store')}}" method="post">
+                            <form class="row g-3" action="{{route('admin.category.store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row-md-6">
                                     <label for="title" class="form-label">Title</label>
