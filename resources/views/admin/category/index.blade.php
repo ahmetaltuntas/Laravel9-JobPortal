@@ -22,8 +22,8 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table id="example2" class="table table-striped table-bordered">
+                    <div class="table-responsive" >
+                        <table id="example2" class="table table-striped table-bordered" style="white-space: pre-wrap">
                             <thead>
                             <tr>
                                 <th>Id</th>
