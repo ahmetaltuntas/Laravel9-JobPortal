@@ -14,7 +14,7 @@
 				<div class="ps-3">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb mb-0 p-0">
-							<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+							<li class="breadcrumb-item"><a href="{{route('admin.category.index')}}"><i class="bx bx-home-alt"></i></a>
 							</li>
 							<li class="breadcrumb-item active" aria-current="page">Edit Category</li>
 						</ol>
@@ -44,7 +44,7 @@
                                 <h5 class="mb-0 text-primary">Edit Category: {{$data->title}}</h5>
                             </div>
                             <hr>
-                            <form class="row g-3" action="/admin/category/update/{{$data->id}}" method="post">
+                            <form class="row g-3" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post">
                                 @csrf
                                 <div class="row-md-6">
                                     <label for="title" class="form-label">Title</label>

@@ -14,7 +14,7 @@
 				<div class="ps-3">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb mb-0 p-0">
-							<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+							<li class="breadcrumb-item"><a href="{{route('admin.category.index')}}"><i class="bx bx-home-alt"></i></a>
 							</li>
 							<li class="breadcrumb-item active" aria-current="page">Show Category</li>
 						</ol>
@@ -84,7 +84,7 @@
 
                                 </div>
                                 <div class="mx-auto">
-                                    <a href="/admin/category/edit/{{$data->id}}"><button type="button" class="btn btn-success px-5"><i class="bx bx-edit mr-1"></i>Edit</button></a>
+                                    <a href="{{route('admin.category.edit',['id'=>$data->id])}}"><button type="button" class="btn btn-success px-5"><i class="bx bx-edit mr-1"></i>Edit</button></a>
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-danger px-5" data-bs-toggle="modal" data-bs-target="#exampleDangerModal"><i class="bx bx-trash mr-1"></i>Delete</button>
                                     <!-- Modal -->
@@ -103,7 +103,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Discard</button>
-                                                    <a href="/admin/category/destroy/{{$data->id}}"><button type="button" class="btn btn-dark">Delete</button></a>
+                                                    <a href="{{route('admin.category.destroy',['id'=>$data->id])}}"><button type="button" class="btn btn-dark">Delete</button></a>
                                                 </div>
                                             </div>
                                         </div>

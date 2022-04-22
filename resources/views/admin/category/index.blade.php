@@ -13,13 +13,18 @@
                 <div class="ps-3">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb mb-0 p-0">
-                            <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                            <li class="breadcrumb-item"><a href="{{route('admin.index')}}"><i class="bx bx-home-alt"></i></a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">Category List</li>
                         </ol>
                     </nav>
                 </div>
+                <div class="ms-auto">
+                    <a href="{{route('admin.category.create')}}"><button type="button" class="btn btn-success px-5 align-items-center"><i class="bx bx-edit mr-1"></i>Add Category</button></a>
+
+                </div>
             </div>
+
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive" >
@@ -46,9 +51,31 @@
                                 <td>{{$rs->description}}</td>
                                 <td>{{$rs->image}}</td>
                                 <td>{{$rs->status}}</td>
-                                <td><button type="button" class="btn btn-outline-success active"><a style="color: white" href="/admin/category/edit/{{$rs->id}}">Edit</a></button></td>
-                                <td><button type="button" class="btn btn-outline-danger active"><a style="color: white" href="/admin/category/delete/{{$rs->id}}">Delete</a></button></td>
-                                <td><button type="button" class="btn btn-outline-info active"><a style="color: black" href="/admin/category/show/{{$rs->id}}">Show</a></button></td>
+                                <td><a href="{{route('admin.category.edit',['id'=>$rs->id])}}"><button type="button" class="btn btn-success">Edit</button></a></td>
+
+                                <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleDangerModal">Delete</button></td>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleDangerModal" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                                        <div class="modal-content bg-danger">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title text-white">Confirm</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body text-white mx-auto">
+
+                                                <p>This category "{{$rs->title}}" will be deleted.</p>
+                                                <p>Are you sure?</p>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Discard</button>
+                                                <a href="{{route('admin.category.destroy',['id'=>$rs->id])}}"><button type="button" class="btn btn-dark">Delete</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <td><button type="button" class="btn btn-outline-info active"><a style="color: black" href="{{route('admin.category.show',['id'=>$rs->id])}}">Show</a></button></td>
                             </tr>
                             @endforeach
                             </tbody>
