@@ -47,6 +47,15 @@
                             <form class="row g-3" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row-md-6">
+                                    <label for="title" class="form-label">Category</label>
+                                    <select class="form-select mb-3" aria-label="Default select example" name="parent_id">
+                                        <option value="0" selected="">Main Category</option>
+                                        @foreach($datalist as $rs)
+                                            <option value="{{$rs->id}}" @if($rs->id==$data->parent_id) selected="selected" @endif >{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="row-md-6">
                                     <label for="title" class="form-label">Title</label>
                                     <input type="text" class="form-control" name="title" value="{{$data->title}}">
                                 </div>
