@@ -65,7 +65,7 @@
                                 <td>{{$rs->status}}</td>
                                 <td><a href="{{route('admin.job.edit',['id'=>$rs->id])}}"><button type="button" class="btn btn-success">Edit</button></a></td>
                                 <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DangerModal-{{$rs->id}}">Delete</button></td>
-                                <td><button type="button" class="btn btn-outline-info active"><a style="color: black" href="{{route('admin.job.show',['id'=>$rs->id])}}">Show</a></button></td>
+                                <td><a style="color: black" href="{{route('admin.job.show',['id'=>$rs->id])}}"><button type="button" class="btn btn-outline-info active">Show</button></a></td>
                             </tr>
                                 <!-- Modal -->
                             <div class="modal fade" id="DangerModal-{{$rs->id}}" tabindex="-1" aria-hidden="true">
