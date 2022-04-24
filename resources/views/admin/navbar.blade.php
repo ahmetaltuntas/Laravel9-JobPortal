@@ -14,9 +14,9 @@
             <div class="menu-title">Job</div>
         </a>
         <ul>
-            <li> <a href="app-emailbox.html"><i class="bx bx-right-arrow-alt"></i>Job List</a>
+            <li> <a href="{{route('admin.job.index')}}"><i class="bx bx-right-arrow-alt"></i>Job List</a>
             </li>
-            <li> <a href="app-chat-box.html"><i class="bx bx-right-arrow-alt"></i>New Job</a>
+            <li> <a href="{{route('admin.job.create')}}"><i class="bx bx-right-arrow-alt"></i>New Job</a>
             </li>
             <li> <a href="app-file-manager.html"><i class="bx bx-right-arrow-alt"></i>Pending Jobs</a>
             </li>
@@ -29,9 +29,9 @@
             <div class="menu-title">Category</div>
         </a>
         <ul>
-            <li> <a href="/admin/category"><i class="bx bx-right-arrow-alt"></i>Category List</a>
+            <li> <a href="{{route('admin.category.index')}}"><i class="bx bx-right-arrow-alt"></i>Category List</a>
             </li>
-            <li> <a href="/admin/category/create"><i class="bx bx-right-arrow-alt"></i>New Category</a>
+            <li> <a href="{{route('admin.category.create')}}"><i class="bx bx-right-arrow-alt"></i>New Category</a>
             </li>
         </ul>
     </li>

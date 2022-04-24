@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title', 'Show Category: '.$data->title)
+@section('title', 'Show Job: '.$data->title)
 
 
 
@@ -14,9 +14,9 @@
 				<div class="ps-3">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb mb-0 p-0">
-							<li class="breadcrumb-item"><a href="{{route('admin.category.index')}}"><i class="bx bx-home-alt"></i></a>
+							<li class="breadcrumb-item"><a href="{{route('admin.job.index')}}"><i class="bx bx-home-alt"></i></a>
 							</li>
-							<li class="breadcrumb-item active" aria-current="page">Show Category</li>
+							<li class="breadcrumb-item active" aria-current="page">Show Job</li>
 						</ol>
 					</nav>
 				</div>
@@ -41,7 +41,7 @@
                             <div class="card-title d-flex align-items-center">
                                 <div><i class="bx bxs-user me-1 font-22 text-primary"></i>
                                 </div>
-                                <h5 class="mb-0 text-primary">Show Category: {{$data->title}}</h5>
+                                <h5 class="mb-0 text-primary">Show Job: {{$data->title}}</h5>
                             </div>
                             <hr>
                             <div class="card">
@@ -60,8 +60,32 @@
                                             <td>{{$data->title}}</td>
                                         </tr>
                                         <tr>
+                                            <th scope="row">Category</th>
+                                            <td>{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($data,$data->title)}}</td>
+                                        </tr>
+                                        <tr>
                                             <th scope="row">Keywords</th>
                                             <td>{{$data->keywords}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Employment type</th>
+                                            <td>{{$data->typeof}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Career level</th>
+                                            <td>{{$data->level}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Location</th>
+                                            <td>{{$data->location}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Salary</th>
+                                            <td>{{$data->salary}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Experience</th>
+                                            <td>{{$data->experience}}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Image</th>
@@ -70,6 +94,10 @@
                                                     <img src="{{Storage::url($data->image)}}" style="height: 110px">
                                                 @endif
                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Description</th>
+                                            <td>{{$data->description}}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Status</th>
@@ -88,7 +116,7 @@
 
                                 </div>
                                 <div class="mx-auto">
-                                    <a href="{{route('admin.category.edit',['id'=>$data->id])}}"><button type="button" class="btn btn-success px-5"><i class="bx bx-edit mr-1"></i>Edit</button></a>
+                                    <a href="{{route('admin.job.edit',['id'=>$data->id])}}"><button type="button" class="btn btn-success px-5"><i class="bx bx-edit mr-1"></i>Edit</button></a>
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-danger px-5" data-bs-toggle="modal" data-bs-target="#exampleDangerModal"><i class="bx bx-trash mr-1"></i>Delete</button>
                                     <!-- Modal -->
@@ -107,7 +135,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Discard</button>
-                                                    <a href="{{route('admin.category.destroy',['id'=>$data->id])}}"><button type="button" class="btn btn-dark">Delete</button></a>
+                                                    <a href="{{route('admin.job.destroy',['id'=>$data->id])}}"><button type="button" class="btn btn-dark">Delete</button></a>
                                                 </div>
                                             </div>
                                         </div>
