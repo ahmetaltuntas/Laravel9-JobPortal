@@ -50,7 +50,7 @@
                             @foreach($data as $rs)
                             <tr style="text-align: center; vertical-align: middle;">
                                 <td>{{$rs->id}}</td>
-                                <td>{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}</td>
+                                <td>{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs->category,$rs->category->title)}}</td>
                                 <td>{{$rs->title}}</td>
                                 <td>{{$rs->typeof}}</td>
                                 <td>{{$rs->experience}}</td>

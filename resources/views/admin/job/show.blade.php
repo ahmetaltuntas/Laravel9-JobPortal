@@ -61,7 +61,7 @@
                                         </tr>
                                         <tr>
                                             <th scope="row">Category</th>
-                                            <td>{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($data,$data->title)}}</td>
+                                            <td>{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($data->category,$data->category->title)}}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Keywords</th>
