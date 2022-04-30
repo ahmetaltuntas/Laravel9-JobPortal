@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Image;
+use App\Models\Job;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -12,19 +16,28 @@ class ImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($pid)
     {
         //
+        $job = Job::find($pid);
+        //$images = Image::where('product_id',$pid);
+
+        $images = DB::table('images')->where('job_id',$pid)->get();
+
+        return view('admin.image.index',[
+            'images' => $images,
+            'job' => $job
+        ]);
     }
 
     /**
      * Show the form for creating a new resource.
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request,$pid)
     {
-        //
+
     }
 
     /**
@@ -33,9 +46,16 @@ class ImageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$pid)
     {
-        //
+        $data = new Image();
+        $data->job_id = $pid;
+        $data->title = $request->title;
+        if($request->file('image')){
+            $data->image=$request->file('image')->store('images');
+        }
+        $data->save();
+        return redirect()->route('admin.image.index',['pid'=>$pid]);
     }
 
     /**
@@ -67,7 +87,7 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$pid, $id)
     {
         //
     }
@@ -78,8 +98,13 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,$pid)
     {
-        //
+        $data= Image::find($id);
+        if($data->image){
+            Storage::delete($data->image);
+        }
+        $data->delete();
+        return redirect()->route('admin.image.index',['pid'=>$pid]);
     }
 }
