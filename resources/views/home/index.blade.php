@@ -124,15 +124,18 @@
         </div>
 
         <div class="pxp-categories-carousel owl-carousel mt-4 mt-md-5 pxp-animate-in pxp-animate-in-top">
+            @foreach($catdata as $rs)
             <a href="jobs-list-1.html" class="pxp-categories-card-2">
                 <div class="pxp-categories-card-2-icon-container">
                     <div class="pxp-categories-card-2-icon">
                         <span class="fa fa-pie-chart"></span>
                     </div>
                 </div>
-                <div class="pxp-categories-card-2-title">Business Development</div>
-                <div class="pxp-categories-card-2-subtitle">139 open positions</div>
+                <div class="pxp-categories-card-2-title">{{$rs->title}}</div>
+                <div class="pxp-categories-card-2-subtitle">{{\App\Http\Controllers\HomeController::getJobNumber($rs->id)}}</div>
             </a>
+            @endforeach
+            <!--
             <a href="jobs-list-1.html" class="pxp-categories-card-2">
                 <div class="pxp-categories-card-2-icon-container">
                     <div class="pxp-categories-card-2-icon">
@@ -259,6 +262,7 @@
                 <div class="pxp-categories-card-2-title">Software Engineering</div>
                 <div class="pxp-categories-card-2-subtitle">439 open positions</div>
             </a>
+            -->
         </div>
     </div>
 

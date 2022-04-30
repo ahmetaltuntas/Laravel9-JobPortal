@@ -17,12 +17,26 @@ class HomeController extends Controller
         $title = Category::find($jobid);
         return $title->title;
     }
+
+    public static function getJobNumber($category){
+        $jobdata= DB::table('jobs')->where('category_id',$category)->get();
+        $num=0;
+        foreach($jobdata as $rs){
+            $num++;
+        }
+        return $num;
+    }
+
     public function index(){
 
         $jobdata=Job::limit(6)->get();
+        $catdata=Category::limit(12)->get();
         return view('home.index',[
             'jobdata' => $jobdata,
+            'catdata' => $catdata
         ]);
+
+
     }
     public function notfound(){
         return view('errors.404');
