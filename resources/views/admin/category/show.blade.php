@@ -72,6 +72,10 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                            <th scope="row">Description</th>
+                                            <td>{!!$data->description!!}</td>
+                                        </tr>
+                                        <tr>
                                             <th scope="row">Status</th>
                                             <td>{{$data->status}}</td>
                                         </tr>

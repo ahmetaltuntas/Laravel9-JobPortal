@@ -2,6 +2,9 @@
 
 @section('title', 'Edit Category: '.$data->title)
 
+@section('head')
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+@endsection
 
 
 @section('content')
@@ -65,7 +68,18 @@
                                 </div>
                                 <div class="row-md-6">
                                     <label for="description" class="form-label">Description</label>
-                                    <input type="text" class="form-control" name="description" value="{{$data->description}}">
+                                    <textarea class="form-control" aria-label="With textarea" id="detail" name="description">{{$data->description}}</textarea>
+
+                                    <script>
+                                        ClassicEditor
+                                            .create( document.querySelector( '#detail' ) )
+                                            .then( editor => {
+                                                console.log( editor );
+                                            } )
+                                            .catch( error => {
+                                                console.error( error );
+                                            } );
+                                    </script>
                                 </div>
                                 <div>
                                     <label for="image" class="form-label">Image</label>

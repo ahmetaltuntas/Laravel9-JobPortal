@@ -97,7 +97,7 @@
                                         </tr>
                                         <tr>
                                             <th scope="row">Description</th>
-                                            <td>{{$data->description}}</td>
+                                            <td>{!!$data->description!!}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Status</th>
