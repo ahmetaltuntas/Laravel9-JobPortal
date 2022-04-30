@@ -281,7 +281,7 @@
                                 <div class="pxp-jobs-card-1-category-icon"><span class="fa fa-bullhorn"></span></div>
                                 <div class="pxp-jobs-card-1-category-label">{{\App\Http\Controllers\HomeController::getCategoryName($rs->category_id)}}</div>
                             </a>
-                            <a href="single-job-1.html" class="pxp-jobs-card-1-title">{{$rs->title}}</a>
+                            <a href="/job/{{$rs->id}}" class="pxp-jobs-card-1-title">{{$rs->title}}</a>
                             <div class="pxp-jobs-card-1-details">
                                 <a href="jobs-list-1.html" class="pxp-jobs-card-1-location">
                                     <span class="fa fa-globe"></span>{{$rs->location}}

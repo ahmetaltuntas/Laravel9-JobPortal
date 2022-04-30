@@ -35,8 +35,13 @@ class HomeController extends Controller
             'jobdata' => $jobdata,
             'catdata' => $catdata
         ]);
+    }
+    public function job($id){
 
-
+        $data=Job::find($id);
+        return view('home.job',[
+            'data' => $data,
+        ]);
     }
     public function notfound(){
         return view('errors.404');
