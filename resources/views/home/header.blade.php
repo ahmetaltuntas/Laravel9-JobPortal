@@ -3,7 +3,7 @@
     <div class="pxp-container">
         <div class="pxp-header-container">
             <div class="pxp-logo">
-                <a href="/" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                <a href="/" class="pxp-animate"><span style="color: var(--pxpMainColor)">J</span>ob<span style="color: var(--pxpMainColor)">P</span>ortal</a>
             </div>
             <div class="pxp-nav-trigger navbar d-xl-none flex-fill">
                 <a role="button" data-bs-toggle="offcanvas" data-bs-target="#pxpMobileNav" aria-controls="pxpMobileNav">

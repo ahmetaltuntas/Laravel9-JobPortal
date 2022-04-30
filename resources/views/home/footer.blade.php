@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-6 col-xl-5 col-xxl-4 mb-4">
                     <div class="pxp-footer-logo">
-                        <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                        <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">J</span>ob<span style="color: var(--pxpMainColor)">P</span>ortal</a>
                     </div>
                     <div class="pxp-footer-section mt-3 mt-md-4">
                         <h3>Call us</h3>

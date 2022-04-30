@@ -269,12 +269,13 @@
             <p class="pxp-text-light text-center">Search your career opportunity through 12,800 jobs</p>
 
             <div class="row mt-4 mt-md-5 pxp-animate-in pxp-animate-in-top">
+                @foreach($jobdata as $rs)
                 <div class="col-md-6 col-xl-4 col-xxl-3 pxp-jobs-card-1-container">
                     <div class="pxp-jobs-card-1 pxp-has-shadow">
                         <div class="pxp-jobs-card-1-top">
                             <a href="jobs-list-1.html" class="pxp-jobs-card-1-category">
                                 <div class="pxp-jobs-card-1-category-icon"><span class="fa fa-bullhorn"></span></div>
-                                <div class="pxp-jobs-card-1-category-label">Marketing & Communication</div>
+                                <div class="pxp-jobs-card-1-category-label">{{\App\Http\Controllers\HomeController::getCategoryName($rs->category_id)}}</div>
                             </a>
                             <a href="single-job-1.html" class="pxp-jobs-card-1-title">Senior Editor</a>
                             <div class="pxp-jobs-card-1-details">
@@ -293,6 +294,8 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
+                <!--
                 <div class="col-md-6 col-xl-4 col-xxl-3 pxp-jobs-card-1-container">
                     <div class="pxp-jobs-card-1 pxp-has-shadow">
                         <div class="pxp-jobs-card-1-top">
@@ -460,6 +463,7 @@
                             <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url({{asset("assets")}}/images/company-logo-1.png);"></a>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
 
