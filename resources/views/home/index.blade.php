@@ -277,17 +277,17 @@
                                 <div class="pxp-jobs-card-1-category-icon"><span class="fa fa-bullhorn"></span></div>
                                 <div class="pxp-jobs-card-1-category-label">{{\App\Http\Controllers\HomeController::getCategoryName($rs->category_id)}}</div>
                             </a>
-                            <a href="single-job-1.html" class="pxp-jobs-card-1-title">Senior Editor</a>
+                            <a href="single-job-1.html" class="pxp-jobs-card-1-title">{{$rs->title}}</a>
                             <div class="pxp-jobs-card-1-details">
                                 <a href="jobs-list-1.html" class="pxp-jobs-card-1-location">
-                                    <span class="fa fa-globe"></span>San Francisco, CA
+                                    <span class="fa fa-globe"></span>{{$rs->location}}
                                 </a>
-                                <div class="pxp-jobs-card-1-type">Full-time</div>
+                                <div class="pxp-jobs-card-1-type">{{$rs->typeof}}</div>
                             </div>
                         </div>
                         <div class="pxp-jobs-card-1-bottom">
                             <div class="pxp-jobs-card-1-bottom-left">
-                                <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
+                                <div class="pxp-jobs-card-1-date pxp-text-light">{{$rs->created_at}}</div>
                                 <a href="single-company-1.html" class="pxp-jobs-card-1-company">Artistre Studio</a>
                             </div>
                             <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url({{asset("assets")}}/images/company-logo-1.png);"></a>
