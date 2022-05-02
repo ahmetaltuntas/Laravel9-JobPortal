@@ -31,6 +31,9 @@ Route::get('/sign-in', [HomeController::class,'signin'])->name('sign-in');
 Route::get('/sign-up', [HomeController::class,'signup'])->name('sign-up');
 Route::get('/contact-us', [HomeController::class,'contactus'])->name('contact-us');
 Route::get('/job/{id}', [HomeController::class,'job'])->name('job');
+Route::get('/joblist', [HomeController::class,'joblist'])->name('joblist');
+Route::get('/dropdown', [HomeController::class,'dropdown'])->name('dropdown');
+
 
 // ############### Admin Panel ##################
 Route::prefix('admin')->name('admin.')->group(function () {

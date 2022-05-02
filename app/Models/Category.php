@@ -13,4 +13,14 @@ class Category extends Model
 
         return $this->hasMany(Job::class);
     }
+
+    //one to many
+    public function parent(){
+        return $this->belongsTo(Category::class,'parent_id');
+    }
+    //one to many
+    public function children(){
+        return $this->hasMany(Category::class,'parent_id');
+    }
+
 }

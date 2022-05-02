@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="{{asset("assets")}}/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="{{asset("assets")}}/css/animate.css">
     <link rel="stylesheet" href="{{asset("assets")}}/css/style.css">
-
+    <script src="{{asset("assets")}}/js/jquery-3.4.1.min.js"></script>
+    <script src="{{asset("assets")}}/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset("assets")}}/js/owl.carousel.min.js"></script>
+    <script src="{{asset("assets")}}/js/nav.js"></script>
+    <script src="{{asset("assets")}}/js/main.js"></script>
     <title>@yield('title')</title>
     @yield('head')
 

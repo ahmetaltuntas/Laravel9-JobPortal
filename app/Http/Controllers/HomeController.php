@@ -13,6 +13,18 @@ class HomeController extends Controller
     protected $appends = [
         'getCategoryName'
     ];
+    public function dropdown(Request $request){
+        if($request->has('category_id')){
+            $parentId = $request->get('category_id');
+            $data = Category::where('parent_id',$parentId)->get();
+            return ['success'=>true,'data'=>$data];
+        }
+    }
+
+    public static function maincategorylist(){
+        return Category::where('parent_id','=',0)->with('children')->get();
+    }
+
     public static function getCategoryName($jobid){
         $title = Category::find($jobid);
         return $title->title;
@@ -32,8 +44,9 @@ class HomeController extends Controller
         $jobdata=Job::limit(6)->get();
         $catdata=Category::limit(12)->get();
         return view('home.index',[
-            'jobdata' => $jobdata,
-            'catdata' => $catdata
+            'catdata' => $catdata,
+            'jobdata' => $jobdata
+
         ]);
     }
     public function job($id){
@@ -41,6 +54,13 @@ class HomeController extends Controller
         $data=Job::find($id);
         return view('home.job',[
             'data' => $data,
+        ]);
+    }
+    public function joblist(){
+        $jobdata=Job::all();
+
+        return view('home.joblist',[
+            'jobdata' => $jobdata
         ]);
     }
     public function notfound(){
