@@ -14,7 +14,7 @@
                 <div class="offcanvas offcanvas-start pxp-nav-mobile-container" tabindex="-1" id="pxpMobileNav">
                     <div class="offcanvas-header">
                         <div class="pxp-logo">
-                            <a href="index-2.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                            <a href="/" class="pxp-animate"><span style="color: var(--pxpMainColor)">J</span>ob<span style="color: var(--pxpMainColor)">P</span>ortal</a>
                         </div>
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -22,36 +22,15 @@
                         <nav class="pxp-nav-mobile">
                             <ul class="navbar-nav justify-content-end flex-grow-1">
                                 <li class="nav-item dropdown">
-                                    <a role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Home</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="pxp-dropdown-header">Home Page Versions</li>
-                                        <li class="nav-item"><a href="index-2.html">Hero with Animated Cards</a></li>
-                                        <li class="nav-item"><a href="index-3.html">Center Image Rotator Hero</a></li>
-                                        <li class="nav-item"><a href="index-4.html">Hero with Illustration</a></li>
-                                        <li class="nav-item"><a href="index-5.html">Boxed Hero with Animation</a></li>
-                                        <li class="nav-item"><a href="index-6.html">Full Image Background Hero</a></li>
-                                        <li class="nav-item"><a href="index-7.html">Full Image with Top Search</a></li>
-                                        <li class="nav-item"><a href="index-8.html">Hero With Image Card</a></li>
-                                    </ul>
+                                    <a href="/" class="nav-link dropdown-toggle">Home</a>
+
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Find Jobs</a>
                                     <ul class="dropdown-menu">
                                         <li class="pxp-dropdown-header">Job Listings</li>
-                                        <li class="nav-item"><a href="jobs-list-1.html">Top Search with Cards</a></li>
-                                        <li class="nav-item"><a href="jobs-list-2.html">Top Search with Small Cards</a></li>
-                                        <li class="nav-item"><a href="jobs-list-3.html">Top Search with List</a></li>
-                                        <li class="nav-item"><a href="jobs-list-4.html">Left Search with Cards</a></li>
-                                        <li class="nav-item"><a href="jobs-list-5.html">Left Search with Small Cards</a></li>
-                                        <li class="nav-item"><a href="jobs-list-6.html">Left Search with List</a></li>
-                                        <li class="nav-item"><a href="jobs-list-7.html">No Sidebar with Cards</a></li>
-                                        <li class="nav-item"><a href="jobs-list-8.html">No Sidebar with Small Cards</a></li>
-                                        <li class="nav-item"><a href="jobs-list-9.html">No Sidebar with List</a></li>
-                                        <li class="nav-item"><a href="jobs-list-10.html">Top Search with Card Details</a></li>
-                                        <li class="pxp-dropdown-header">Single Job</li>
-                                        <li class="nav-item"><a href="single-job-1.html">Wide Content</a></li>
-                                        <li class="nav-item"><a href="single-job-2.html">Right Side Panel</a></li>
-                                        <li class="nav-item"><a href="single-job-3.html">Center Boxed Content</a></li>
+                                        <li class="nav-item"><a href="/joblist">Top Search</a></li>
+
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -140,158 +119,12 @@
                                             <div class="pxp-dropdown-header">Job Listings</div>
                                             <ul>
                                                 <li>
-                                                    <a href="jobs-list-1.html" class="pxp-has-icon-small">
+                                                    <a href="/joblist" class="pxp-has-icon-small">
                                                         <div class="pxp-dropdown-icon">
                                                             <span class="fa fa-th-large"></span>
                                                         </div>
                                                         <div class="pxp-dropdown-text">
-                                                            Top Search with Cards
-                                                            <span>Jobs listing version 1</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="jobs-list-2.html" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-th"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Top Search with Small Cards
-                                                            <span>Jobs listing version 2</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="jobs-list-3.html" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-th-list"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Top Search with List
-                                                            <span>Jobs listing version 3</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="jobs-list-4.html" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-toggle-right"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Left Search with Cards
-                                                            <span>Jobs listing version 4</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="jobs-list-5.html" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-list-ul"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Left Search with Small Cards
-                                                            <span>Jobs listing version 5</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <div class="pxp-dropdown-header mt-3">Single Job</div>
-                                            <ul>
-                                                <li>
-                                                    <a href="single-job-1.html" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-align-justify"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Wide Content
-                                                            <span>Single job version 1</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="single-job-2.html" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-dedent"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Right Side Panel
-                                                            <span>Single job version 2</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-auto pxp-dropdown-list">
-                                            <div class="pxp-dropdown-header">&nbsp;</div>
-                                            <ul>
-                                                <li>
-                                                    <a href="jobs-list-6.html" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-indent"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Left Search with List
-                                                            <span>Jobs listing version 6</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="jobs-list-7.html" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-th-large"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            No Sidebar with Cards
-                                                            <span>Jobs listing version 7</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="jobs-list-8.html" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-th"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            No Sidebar with Small Cards
-                                                            <span>Jobs listing version 8</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="jobs-list-9.html" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-th-list"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            No Sidebar with List
-                                                            <span>Jobs listing version 9</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="jobs-list-10.html" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-list-alt"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Top Search with Card Details
-                                                            <span>Jobs listing version 10</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <div class="pxp-dropdown-header mt-3">&nbsp;</div>
-                                            <ul>
-
-
-                                                <li>
-                                                    <a href="single-job-3.html" class="pxp-has-icon-small">
-                                                        <div class="pxp-dropdown-icon">
-                                                            <span class="fa fa-align-center"></span>
-                                                        </div>
-                                                        <div class="pxp-dropdown-text">
-                                                            Center Boxed Content
-                                                            <span>Single job version 3</span>
+                                                            Top Search
                                                         </div>
                                                     </a>
                                                 </li>

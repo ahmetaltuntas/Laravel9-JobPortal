@@ -56,12 +56,22 @@ class HomeController extends Controller
             'data' => $data,
         ]);
     }
-    public function joblist(){
-        $jobdata=Job::all();
+    public function joblist(Request $request){
 
-        return view('home.joblist',[
-            'jobdata' => $jobdata
-        ]);
+        if($request->has('category_id')&&$request->category_id!='null'){
+            $parentId = $request->get('subcategory_id');
+            $jobdata = Job::where('category_id',$parentId)->get();
+            return view('home.joblist',[
+                'jobdata' => $jobdata
+            ]);
+        }
+        else{
+            $jobdata=Job::all();
+
+            return view('home.joblist',[
+                'jobdata' => $jobdata
+            ]);
+        }
     }
     public function notfound(){
         return view('errors.404');

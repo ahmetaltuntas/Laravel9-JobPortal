@@ -20,20 +20,20 @@
                     <div class="col-12 col-lg">
                         <div class="input-group mb-3 mb-lg-0">
                             <span class="input-group-text"><span class="fa fa-search"></span></span>
-                            <input type="text" class="form-control" placeholder="Job Title or Keyword">
+                            <input type="text" class="form-control" name="title" placeholder="Job Title or Keyword">
                         </div>
                     </div>
                     <div class="col-12 col-lg pxp-has-left-border">
                         <div class="input-group mb-3 mb-lg-0">
                             <span class="input-group-text"><span class="fa fa-globe"></span></span>
-                            <input type="text" class="form-control" placeholder="Location">
+                            <input type="text" class="form-control" name="location" placeholder="Location">
                         </div>
                     </div>
                     <div class="col-12 col-lg pxp-has-left-border">
                         <div class="input-group mb-3 mb-lg-0" for="category_id">
                             <span class="input-group-text"><span class="fa fa-folder-o"></span></span>
                             <select class="form-select" name="category_id" id="category_id">
-                                <option value="">All categories</option>
+                                <option value=null>All categories</option>
                                 @foreach($mainCategories as $rs)
                                 <option value="{{$rs->id}}">{{$rs->title}}</option>
                                 @endforeach
@@ -44,7 +44,7 @@
                         <div class="input-group mb-3 mb-lg-0" for="subcategory_id">
                             <span class="input-group-text"><span class="fa fa-folder-o"></span></span>
                             <select class="form-select" name="subcategory_id" id="subcategory_id" >
-                                <option value="">Subcategory</option>
+                                <option>Subcategory</option>
                             </select>
                         </div>
                     </div>
@@ -231,7 +231,14 @@
                     <div class="pxp-jobs-list-top mt-4 mt-lg-0">
                         <div class="row justify-content-between align-items-center">
                             <div class="col-auto">
-                                <h2><span class="pxp-text-light">Showing</span> 8,536 <span class="pxp-text-light">jobs</span></h2>
+                                @php
+                                $num = 0;
+                                foreach ($jobdata as $rs){
+                                    $num +=1;
+                                }
+                                @endphp
+
+                                <h2><span class="pxp-text-light">Showing</span> {{$num}} <span class="pxp-text-light">jobs</span></h2>
                             </div>
                             <div class="col-auto">
                                 <select class="form-select">
@@ -248,7 +255,7 @@
                         <div class="col-xxl-6 pxp-jobs-card-2-container">
                             <div class="pxp-jobs-card-2 pxp-has-border">
                                 <div class="pxp-jobs-card-2-top">
-                                    <a href="single-company-1.html" class="pxp-jobs-card-2-company-logo" style="background-image: url(images/company-logo-1.png);"></a>
+                                    <a href="single-company-1.html" class="pxp-jobs-card-2-company-logo" style="background-image: url({{Storage::url($rs->image)}});"></a>
                                     <div class="pxp-jobs-card-2-info">
                                         <a href="/job/{{$rs->id}}" class="pxp-jobs-card-2-title">{{$rs->title}}</a>
                                         <div class="pxp-jobs-card-2-details">
