@@ -33,7 +33,7 @@
                         <div class="input-group mb-3 mb-lg-0" for="category_id">
                             <span class="input-group-text"><span class="fa fa-folder-o"></span></span>
                             <select class="form-select" name="category_id" id="category_id">
-                                <option value=null>All categories</option>
+                                <option value="null">All categories</option>
                                 @foreach($mainCategories as $rs)
                                 <option value="{{$rs->id}}">{{$rs->title}}</option>
                                 @endforeach
@@ -259,7 +259,7 @@
                                     <div class="pxp-jobs-card-2-info">
                                         <a href="/job/{{$rs->id}}" class="pxp-jobs-card-2-title">{{$rs->title}}</a>
                                         <div class="pxp-jobs-card-2-details">
-                                            <a href="jobs-list-1.html" class="pxp-jobs-card-2-location">
+                                            <a href="/joblist?location={{$rs->location}}&category_id=&subcategory_id=" class="pxp-jobs-card-2-location">
                                                 <span class="fa fa-globe"></span>{{$rs->location}}
                                             </a>
                                             <div class="pxp-jobs-card-2-type">{{$rs->typeof}}</div>
@@ -267,7 +267,7 @@
                                     </div>
                                 </div>
                                 <div class="pxp-jobs-card-2-bottom">
-                                    <a href="jobs-list-1.html" class="pxp-jobs-card-2-category">
+                                    <a href="/joblist?category_id=&subcategory_id={{$rs->category_id}}" class="pxp-jobs-card-2-category">
                                         <div class="pxp-jobs-card-2-category-label">{{\App\Http\Controllers\HomeController::getCategoryName($rs->category_id)}}</div>
                                     </a>
                                     <div class="pxp-jobs-card-2-bottom-right">

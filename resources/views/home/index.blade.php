@@ -125,7 +125,7 @@
 
         <div class="pxp-categories-carousel owl-carousel mt-4 mt-md-5 pxp-animate-in pxp-animate-in-top">
             @foreach($catdata as $rs)
-            <a href="jobs-list-1.html" class="pxp-categories-card-2">
+            <a href="/joblist?category_id=&subcategory_id={{$rs->id}}" class="pxp-categories-card-2">
                 <div class="pxp-categories-card-2-icon-container">
                     <div class="pxp-categories-card-2-icon">
                         <span class="fa fa-pie-chart"></span>
@@ -277,13 +277,13 @@
                 <div class="col-md-6 col-xl-4 col-xxl-3 pxp-jobs-card-1-container">
                     <div class="pxp-jobs-card-1 pxp-has-shadow">
                         <div class="pxp-jobs-card-1-top">
-                            <a href="jobs-list-1.html" class="pxp-jobs-card-1-category">
+                            <a href="/joblist?category_id=&subcategory_id={{$rs->category_id}}" class="pxp-jobs-card-1-category">
                                 <div class="pxp-jobs-card-1-category-icon"><span class="fa fa-bullhorn"></span></div>
                                 <div class="pxp-jobs-card-1-category-label">{{\App\Http\Controllers\HomeController::getCategoryName($rs->category_id)}}</div>
                             </a>
                             <a href="/job/{{$rs->id}}" class="pxp-jobs-card-1-title">{{$rs->title}}</a>
                             <div class="pxp-jobs-card-1-details">
-                                <a href="jobs-list-1.html" class="pxp-jobs-card-1-location">
+                                <a href="/joblist?location={{$rs->location}}&category_id=&subcategory_id=" class="pxp-jobs-card-1-location">
                                     <span class="fa fa-globe"></span>{{$rs->location}}
                                 </a>
                                 <div class="pxp-jobs-card-1-type">{{$rs->typeof}}</div>

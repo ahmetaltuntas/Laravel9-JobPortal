@@ -58,12 +58,75 @@ class HomeController extends Controller
     }
     public function joblist(Request $request){
 
-        if($request->has('category_id')&&$request->category_id!='null'){
-            $parentId = $request->get('subcategory_id');
-            $jobdata = Job::where('category_id',$parentId)->get();
-            return view('home.joblist',[
-                'jobdata' => $jobdata
-            ]);
+        if($request->has('category_id')&&$request->title!=null){
+            $title = $request->get('title');
+
+            if($request->location!=null){
+                $loc = $request->get('location');
+                if($request->category_id!='null'){
+                    $parentId = $request->get('subcategory_id');
+                    $jobdata = Job::where('category_id',$parentId)->where('title','LIKE','%'.$title.'%')->where('location','LIKE','%'.$loc.'%')->get();
+                    return view('home.joblist',[
+                        'jobdata' => $jobdata
+                    ]);
+                }
+                elseif($request->category_id=='null'){
+                    $jobdata = Job::where('location','LIKE','%'.$loc.'%')->where('title','LIKE','%'.$title.'%')->get();
+                    return view('home.joblist',[
+                        'jobdata' => $jobdata
+                    ]);
+                }
+            }
+            elseif($request->location==null){
+                if($request->category_id!='null'){
+                    $parentId = $request->get('subcategory_id');
+                    $jobdata = Job::where('category_id',$parentId)->where('title','LIKE','%'.$title.'%')->get();
+                    return view('home.joblist',[
+                        'jobdata' => $jobdata
+                    ]);
+                }
+                elseif($request->category_id=='null'){
+                    $jobdata = Job::where('title','LIKE','%'.$title.'%')->get();
+                    return view('home.joblist',[
+                        'jobdata' => $jobdata
+                    ]);
+                }
+            }
+
+        }
+        elseif($request->has('category_id')&&$request->title==null){
+            if($request->location!=null){
+                $loc = $request->get('location');
+                if($request->category_id!='null'){
+                    $parentId = $request->get('subcategory_id');
+                    $jobdata = Job::where('category_id',$parentId)->where('location','LIKE','%'.$loc.'%')->get();
+                    return view('home.joblist',[
+                        'jobdata' => $jobdata
+                    ]);
+                }
+                elseif($request->category_id=='null'){
+                    $jobdata = Job::where('location','LIKE','%'.$loc.'%')->get();
+                    return view('home.joblist',[
+                        'jobdata' => $jobdata
+                    ]);
+                }
+            }
+            elseif($request->location==null){
+                if($request->category_id!='null'){
+                    $parentId = $request->get('subcategory_id');
+                    $jobdata = Job::where('category_id',$parentId)->get();
+                    return view('home.joblist',[
+                        'jobdata' => $jobdata
+                    ]);
+                }
+                elseif($request->category_id=='null'){
+                    $jobdata = Job::all();
+                    return view('home.joblist',[
+                        'jobdata' => $jobdata
+                    ]);
+                }
+            }
+
         }
         else{
             $jobdata=Job::all();
