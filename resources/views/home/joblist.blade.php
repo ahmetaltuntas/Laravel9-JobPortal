@@ -8,6 +8,7 @@
     <link href="{{asset("assets")}}/css/select2.min.css" rel="stylesheet" />
     <script src="{{asset("assets")}}/js/select2.min.js"></script>
     <div class="pxp-preloader"><span>Loading...</span></div>
+
     @php
         $mainCategories = \App\Http\Controllers\HomeController::maincategorylist();
     @endphp
@@ -16,7 +17,8 @@
             <h1>Search Jobs</h1>
             <div class="pxp-hero-subtitle pxp-text-light">Search your career opportunity through <strong>12,800</strong> jobs</div>
             <div class="pxp-hero-form pxp-hero-form-round pxp-large mt-3 mt-lg-4">
-                <form class="row gx-3 align-items-center">
+                <form class="row gx-3 align-items-center" action="{{url('joblist')}}" method="post">
+                    @csrf
                     <div class="col-12 col-lg">
                         <div class="input-group mb-3 mb-lg-0">
                             <span class="input-group-text"><span class="fa fa-search"></span></span>

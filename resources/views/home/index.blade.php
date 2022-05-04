@@ -15,23 +15,25 @@
                         <div class="pxp-hero-subtitle mt-3 mt-lg-4">Search your career opportunity through <strong>12,800</strong> jobs</div>
 
                         <div class="pxp-hero-form pxp-hero-form-round mt-3 mt-lg-4">
-                            <form class="row gx-3 align-items-center" action="jobs-list-1.html">
+                            <form class="row gx-3 align-items-center" action="{{url('joblist')}}" method="post">
+                                @csrf
                                 <div class="col-12 col-sm">
                                     <div class="mb-3 mb-sm-0">
-                                        <input type="text" class="form-control" placeholder="Job Title or Keyword">
+                                        <input type="text" name="title" class="form-control" placeholder="Job Title or Keyword">
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm pxp-has-left-border">
                                     <div class="mb-3 mb-sm-0">
-                                        <input type="text" class="form-control" placeholder="Location">
+                                        <input type="text" name="location" class="form-control" placeholder="Location">
                                     </div>
                                 </div>
+                                <input value="null" name="category_id" hidden>
                                 <div class="col-12 col-sm-auto">
                                     <button><span class="fa fa-search"></span></button>
                                 </div>
                             </form>
                         </div>
-
+                        <!--
                         <div class="pxp-hero-searches-container">
                             <div class="pxp-hero-searches-label">Popular Searches</div>
                             <div class="pxp-hero-searches">
@@ -48,6 +50,7 @@
                                 </div>
                             </div>
                         </div>
+                        -->
                     </div>
                     <div class="d-none d-xl-block col-xl-5 position-relative">
                         <div class="pxp-hero-cards-container pxp-animate-cards pxp-mouse-move" data-speed="160">
