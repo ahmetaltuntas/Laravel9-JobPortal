@@ -7,6 +7,7 @@ use App\Models\Job;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -21,7 +22,10 @@ class HomeController extends Controller
             return ['success'=>true,'data'=>$data];
         }
     }
-
+    public static function geticon(){
+        $icon= Setting::first();
+        return $icon->icon;
+    }
     public static function maincategorylist(){
         return Category::where('parent_id','=',0)->with('children')->get();
     }
