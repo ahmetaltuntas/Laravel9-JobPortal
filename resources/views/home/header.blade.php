@@ -327,13 +327,12 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
-                            <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
-                            <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
-                            <li><a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
-                            <li><a class="dropdown-item" href="sign-in.html">Sign In</a></li>
-                            <li><a class="dropdown-item" href="sign-up.html">Sign Up</a></li>
-                            <li><a class="dropdown-item" href="404.html">404 Page</a></li>
+                            <li><a class="dropdown-item" href="{{route('aboutus')}}">About Us</a></li>
+                            <li><a class="dropdown-item" href="{{route('faqs')}}">FAQs</a></li>
+                            <li><a class="dropdown-item" href="{{route('references')}}">References</a></li>
+                            <li><a class="dropdown-item" href="{{route('contactus')}}">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="{{route('sign-in')}}">Sign In</a></li>
+                            <li><a class="dropdown-item" href="{{route('sign-up')}}">Sign Up</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -147,7 +147,18 @@ class HomeController extends Controller
         return view('errors.404');
     }
     public function aboutus(){
-        return view('home.about-us');
+        $settings= Setting::first();
+
+        return view('home.aboutus',[
+            'settings' => $settings
+        ]);
+    }
+    public function references(){
+        $settings= Setting::first();
+
+        return view('home.references',[
+            'settings' => $settings
+        ]);
     }
     public function faqs(){
         return view('home.faqs');
@@ -159,6 +170,6 @@ class HomeController extends Controller
         return view('home.sign-up');
     }
     public function contactus(){
-        return view('home.contact-us');
+        return view('home.contactus');
     }
 }

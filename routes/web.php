@@ -26,14 +26,15 @@ Route::get('/', function () {
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/home', [HomeController::class,'index'])->name('home');
 Route::get('/404', [HomeController::class,'notfound'])->name('notfound');
-Route::get('/about-us', [HomeController::class,'about-us'])->name('about-us');
+Route::get('/about-us', [HomeController::class,'aboutus'])->name('aboutus');
 Route::get('/faqs', [HomeController::class,'faqs'])->name('faqs');
 Route::get('/sign-in', [HomeController::class,'signin'])->name('sign-in');
 Route::get('/sign-up', [HomeController::class,'signup'])->name('sign-up');
-Route::get('/contact-us', [HomeController::class,'contactus'])->name('contact-us');
+Route::get('/contactus', [HomeController::class,'contactus'])->name('contactus');
 Route::get('/job/{id}', [HomeController::class,'job'])->name('job');
 Route::get('/joblist', [HomeController::class,'joblist'])->name('joblist');
 Route::post('/joblist', [HomeController::class,'joblist'])->name('joblist');
+Route::get('/references', [HomeController::class,'references'])->name('references');
 Route::get('/dropdown', [HomeController::class,'dropdown'])->name('dropdown');
 
 
