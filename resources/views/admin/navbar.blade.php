@@ -72,7 +72,7 @@
     </li>
     <li class="menu-label">Label</li>
     <li>
-        <a href="widgets.html">
+        <a href="{{route('admin.settings')}}">
             <div class="parent-icon"><i class='bx bx-category'></i>
             </div>
             <div class="menu-title">Settings</div>

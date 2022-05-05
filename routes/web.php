@@ -42,6 +42,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminHomeController::class, 'index'])->name('index');
     Route::get('/faq', [AdminHomeController::class, 'faq'])->name('faq');
 
+// ############### General Category ##################
+    Route::get('/settings', [AdminHomeController::class, 'settings'])->name('settings');
+    Route::post('/settings', [AdminHomeController::class, 'settingsupdate'])->name('settings.update');
+
 // ############### Admin Category ##################
     Route::prefix('/category')->name('category.')->controller(CategoryController::class)->group(function () {
         Route::get('/', 'index')->name('index');

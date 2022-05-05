@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Job;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -43,9 +44,11 @@ class HomeController extends Controller
 
         $jobdata=Job::limit(6)->get();
         $catdata=Category::limit(12)->get();
+        $settings= Setting::first();
         return view('home.index',[
             'catdata' => $catdata,
-            'jobdata' => $jobdata
+            'jobdata' => $jobdata,
+            'settings' => $settings
 
         ]);
     }

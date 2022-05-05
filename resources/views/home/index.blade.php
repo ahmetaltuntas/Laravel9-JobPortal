@@ -1,6 +1,8 @@
 @extends('layouts.frontbase')
 
-@section('title', 'Job Portal')
+@section('title', $settings->title)
+@section('description', $settings->description)
+@section('keywords', $settings->keywords)
 
 
 
