@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en" class="pxp-root">
 <head>
     <meta charset="utf-8">

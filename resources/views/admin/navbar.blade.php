@@ -64,7 +64,7 @@
         </a>
     </li>
     <li>
-        <a href="/admin/faq">
+        <a href="{{route("admin.faq.index")}}">
             <div class="parent-icon"><i class='bx bx-help-circle'></i>
             </div>
             <div class="menu-title">FAQ</div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Job;
 use App\Models\Message;
 use App\Models\Setting;
@@ -162,7 +163,11 @@ class HomeController extends Controller
         ]);
     }
     public function faqs(){
-        return view('home.faqs');
+        $setting= Faq::all();
+
+        return view('home.faqs',[
+            'setting' => $setting
+        ]);
     }
     public function signin(){
         return view('home.sign-in');
