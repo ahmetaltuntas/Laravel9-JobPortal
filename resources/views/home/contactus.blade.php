@@ -38,7 +38,7 @@
                                 <span class="fa fa-envelope-o"></span>
                             </div>
                         </div>
-                        <div class="pxp-contact-card-1-title">office@jobster.com</div>
+                        <div class="pxp-contact-card-1-title">admin@admin.com</div>
                     </a>
                 </div>
             </div>
@@ -47,20 +47,31 @@
                 <div class="col-lg-6 col-xxl-4">
                     <div class="pxp-contact-us-form pxp-has-animation pxp-animate">
                         <h2 class="pxp-section-h2 text-center">Contact Us</h2>
-                        <form class="mt-4">
+                        <h2 class="pxp-section-h2 text-center">{{Session::get('info')}}</h2>
+
+                        <form class="mt-4" action="{{route("storemessage")}}" method="post">
+                            @csrf
                             <div class="mb-3">
-                                <label for="contact-us-name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="contact-us-name" placeholder="Enter your name">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
                             </div>
                             <div class="mb-3">
-                                <label for="contact-us-email" class="form-label">Email</label>
-                                <input type="text" class="form-control" id="contact-us-email" placeholder="Enter your email address">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address">
                             </div>
                             <div class="mb-3">
-                                <label for="contact-us-message" class="form-label">Message</label>
-                                <textarea class="form-control" id="contact-us-message" placeholder="Type your message here..."></textarea>
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
                             </div>
-                            <a href="#" class="btn rounded-pill pxp-section-cta d-block">Send Message</a>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter your subject">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" placeholder="Type your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn rounded-pill pxp-section-cta d-block">Send Message</button>
                         </form>
                     </div>
                 </div>

@@ -43,7 +43,7 @@
         </a>
     </li>
     <li>
-        <a href="/">
+        <a href="{{route("admin.message.index")}}">
             <div class="parent-icon"><i class='bx bx-message'></i>
             </div>
             <div class="menu-title">Messages</div>

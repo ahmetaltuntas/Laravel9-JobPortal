@@ -261,9 +261,10 @@
                                     <div class="pxp-jobs-card-2-info">
                                         <a href="/job/{{$rs->id}}" class="pxp-jobs-card-2-title">{{$rs->title}}</a>
                                         <div class="pxp-jobs-card-2-details">
-                                            <a href="/joblist?location={{$rs->location}}&category_id=&subcategory_id=" class="pxp-jobs-card-2-location">
+                                            <a href="/joblist?location={{$rs->location}}&category_id=null&subcategory_id=Subcategory" class="pxp-jobs-card-2-location">
                                                 <span class="fa fa-globe"></span>{{$rs->location}}
                                             </a>
+
                                             <div class="pxp-jobs-card-2-type">{{$rs->typeof}}</div>
                                         </div>
                                     </div>

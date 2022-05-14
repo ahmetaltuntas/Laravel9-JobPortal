@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminPanel\AdminJobController;
+use App\Http\Controllers\AdminPanel\MessageController;
 use App\Http\Controllers\HomeController;
 use App\Models\Job;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,7 @@ Route::get('/faqs', [HomeController::class,'faqs'])->name('faqs');
 Route::get('/sign-in', [HomeController::class,'signin'])->name('sign-in');
 Route::get('/sign-up', [HomeController::class,'signup'])->name('sign-up');
 Route::get('/contactus', [HomeController::class,'contactus'])->name('contactus');
+Route::post('/storemessage', [HomeController::class,'storemessage'])->name('storemessage');
 Route::get('/job/{id}', [HomeController::class,'job'])->name('job');
 Route::get('/joblist', [HomeController::class,'joblist'])->name('joblist');
 Route::post('/joblist', [HomeController::class,'joblist'])->name('joblist');
@@ -75,6 +77,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/{pid}', 'index')->name('index');
         Route::post('/store/{pid}', 'store')->name('store');
         Route::get('/destroy/{pid}/{id}', 'destroy')->name('destroy');
+
+    });
+// ############### Admin Message ##################
+    Route::prefix('/message')->name('message.')->controller(MessageController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/show/{id}', 'show')->name('show');
+        Route::get('/destroy/{id}', 'destroy')->name('destroy');
 
     });
 });
