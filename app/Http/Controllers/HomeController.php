@@ -47,7 +47,7 @@ class HomeController extends Controller
         }
         return $num;
     }
-
+/*
     public static function getCommentNumber($id){
         $num=0;
         foreach($id as $rs){
@@ -55,7 +55,7 @@ class HomeController extends Controller
         }
         return $num;
     }
-
+*/
     public function index(){
 
         $jobdata=Job::limit(6)->get();

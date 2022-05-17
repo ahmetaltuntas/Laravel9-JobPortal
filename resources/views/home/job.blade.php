@@ -133,7 +133,7 @@
                         <div class="pxp-blog-comments-block">
                             {{Session::get('info')}}
                             <div class="pxp-blog-post-comments">
-                                <h4>{{\App\Http\Controllers\HomeController::getCommentNumber($reviews)}} Comments</h4>
+                                <h4>{{$reviews->count('id')}} Comments</h4>
                                 <div class="mt-3 mt-lg-4">
                                     <ol class="pxp-comments-list">
                                         @foreach($reviews as $rs)
