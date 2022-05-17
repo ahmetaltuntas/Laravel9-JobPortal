@@ -69,7 +69,7 @@ body {
     -moz-font-feature-settings: 'kern';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-} 
+}
 a {
     color: var(--pxpMainColor);
     text-decoration: none;
@@ -262,7 +262,7 @@ a:hover {
 .pxp-search-container {
     width: 40%;
 }
-.btn-check:focus + .btn, 
+.btn-check:focus + .btn,
 .btn:focus {
     box-shadow: none;
 }
@@ -357,7 +357,7 @@ a:hover {
     color: var(--pxpMainColorDark);
     background-color: #fff;
 }
-.pxp-is-sticky .pxp-nav-btn:hover, 
+.pxp-is-sticky .pxp-nav-btn:hover,
 .pxp-on-light .pxp-nav-btn:hover {
     color: #fff;
     background-color: var(--pxpMainColorDark);
@@ -446,7 +446,7 @@ a:hover {
     margin-left: 7px;
     border-top-color: #fff;
 }
-.pxp-is-sticky .pxp-user-nav-dropdown > .dropdown-toggle::after, 
+.pxp-is-sticky .pxp-user-nav-dropdown > .dropdown-toggle::after,
 .pxp-on-light .pxp-user-nav-dropdown > .dropdown-toggle::after {
     border-top-color: var(--pxpTextColor);
 }
@@ -459,7 +459,7 @@ a:hover {
     transition-property: opacity;
     color: #fff;
 }
-.pxp-is-sticky .pxp-user-nav-name, 
+.pxp-is-sticky .pxp-user-nav-name,
 .pxp-on-light .pxp-user-nav-name {
     color: var(--pxpTextColor);
 }
@@ -986,7 +986,7 @@ a:hover {
     font-size: 28px;
     font-weight: 700;
     line-height: 28px;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 .pxp-hero-card-info-item-number > span {
     font-size: 16px;
@@ -1120,9 +1120,9 @@ a:hover {
     animation: spinRight 50s linear infinite;
 }
 @keyframes spinRight {
-    100% { 
+    100% {
         transform: rotate(360deg);
-    } 
+    }
 }
 .pxp-hero-boxed-circular-outer-1 {
     position: absolute;
@@ -1167,9 +1167,9 @@ a:hover {
     animation: spinLeft 40s linear infinite;
 }
 @keyframes spinLeft {
-    100% { 
+    100% {
         transform: rotate(-360deg);
-    } 
+    }
 }
 .pxp-hero-boxed-circular-middle-1 {
     position: absolute;
@@ -1388,7 +1388,7 @@ a:hover {
     font-size: 28px;
     font-weight: 700;
     line-height: 28px;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 .pxp-hero-boxed-info-list-item-number > span {
     font-size: 16px;
@@ -1693,7 +1693,7 @@ a:hover {
     margin-top: 0;
 }
 .pxp-jobs-card-1-title:hover,
-.pxp-jobs-card-2-title:hover, 
+.pxp-jobs-card-2-title:hover,
 .pxp-jobs-card-3-title:hover {
     color: var(--pxpMainColor);
 }
@@ -1769,12 +1769,12 @@ a:hover {
 .pxp-jobs-card-3-company {
     display: unset;
 }
-.pxp-jobs-card-1-company:hover, 
+.pxp-jobs-card-1-company:hover,
 .pxp-jobs-card-2-company:hover,
 .pxp-jobs-card-3-company:hover {
     color: var(--pxpMainColor);
 }
-.pxp-jobs-card-1-company-logo, 
+.pxp-jobs-card-1-company-logo,
 .pxp-jobs-card-2-company-logo,
 .pxp-jobs-card-3-company-logo {
     display: block;
@@ -2422,7 +2422,7 @@ a:hover {
     font-size: 14px;
     margin-top: 10px;
 }
-.pxp-testimonials-1-carousel .carousel-control-next, 
+.pxp-testimonials-1-carousel .carousel-control-next,
 .pxp-testimonials-1-carousel .carousel-control-prev {
     color: var(--pxpTextColor);
     font-size: 36px;
@@ -2434,9 +2434,9 @@ a:hover {
 .pxp-testimonials-1-carousel .carousel-control-prev {
     left: -15%;
 }
-.pxp-testimonials-1-carousel .carousel-control-next:focus, 
-.pxp-testimonials-1-carousel .carousel-control-next:hover, 
-.pxp-testimonials-1-carousel .carousel-control-prev:focus, 
+.pxp-testimonials-1-carousel .carousel-control-next:focus,
+.pxp-testimonials-1-carousel .carousel-control-next:hover,
+.pxp-testimonials-1-carousel .carousel-control-prev:focus,
 .pxp-testimonials-1-carousel .carousel-control-prev:hover {
     color: var(--pxpTextColor);
     opacity: .7;
@@ -2805,10 +2805,10 @@ a:hover {
     border-color: var(--pxpMainColor);
     background-color: var(--pxpMainColor);
 }
-.pxp-price-plans-switcher .btn-check:active+.btn-outline-primary, 
-.pxp-price-plans-switcher .btn-check:checked+.btn-outline-primary, 
-.pxp-price-plans-switcher .btn-outline-primary.active, 
-.pxp-price-plans-switcher .btn-outline-primary.dropdown-toggle.show, 
+.pxp-price-plans-switcher .btn-check:active+.btn-outline-primary,
+.pxp-price-plans-switcher .btn-check:checked+.btn-outline-primary,
+.pxp-price-plans-switcher .btn-outline-primary.active,
+.pxp-price-plans-switcher .btn-outline-primary.dropdown-toggle.show,
 .pxp-price-plans-switcher .btn-outline-primary:active {
     color: #fff;
     background-color: var(--pxpMainColorDark);
@@ -3532,7 +3532,7 @@ a:hover {
     font-size: 18px;
     font-weight: 600;
 }
-.pxp-single-company-side-panel .form-control, 
+.pxp-single-company-side-panel .form-control,
 .pxp-single-company-side-panel .form-select {
     border: 1px solid rgba(0,0,0,.2);
     font-weight: 300;
@@ -3912,7 +3912,7 @@ a:hover {
     transition: var(--pxpHoverTransition);
     transition-property: background-color, color;
 }
-.pxp-dashboard-table-options button:hover, 
+.pxp-dashboard-table-options button:hover,
 .pxp-dashboard-inbox-list-item-options button:hover {
     color: #fff;
     background-color: var(--pxpMainColor);
@@ -3921,7 +3921,7 @@ a:hover {
     font-size: 13px;
     font-weight: 500;
 }
-.pxp-dashboard-content-details form .form-control, 
+.pxp-dashboard-content-details form .form-control,
 .pxp-dashboard-content-details form .form-select {
     border: 1px solid rgba(0,0,0,.2);
     font-weight: 300;
@@ -3930,7 +3930,7 @@ a:hover {
     border-radius: 30px;
     padding: 1rem;
 }
-.pxp-dashboard-content-details form .form-control:focus, 
+.pxp-dashboard-content-details form .form-control:focus,
 .pxp-dashboard-content-details form .form-select:focus {
     box-shadow: none;
     border: 1px solid rgba(0,0,0,.4);
@@ -4508,7 +4508,7 @@ a:hover {
     font-size: 18px;
     font-weight: 600;
 }
-.pxp-single-candidate-side-panel .form-control, 
+.pxp-single-candidate-side-panel .form-control,
 .pxp-single-candidate-side-panel .form-select {
     border: 1px solid rgba(0,0,0,.2);
     font-weight: 300;
@@ -5190,7 +5190,7 @@ ol.pxp-comments-list {
 .pxp-contact-item-text {
     font-size: 14px;
 }
-.pxp-contact-us-form .form-control, 
+.pxp-contact-us-form .form-control,
 .pxp-contact-us-form .form-select {
     border: 1px solid rgba(0,0,0,.2);
     font-weight: 300;
@@ -5335,7 +5335,7 @@ ol.pxp-comments-list {
     padding: 1rem 1.3rem;
 }
 .pxp-sign-hero-form .form-floating > .form-control:-webkit-autofill,
-.pxp-sign-hero-form .form-floating > .form-control:focus, 
+.pxp-sign-hero-form .form-floating > .form-control:focus,
 .pxp-sign-hero-form .form-floating > .form-control:not(:placeholder-shown) {
     padding-top: 1.625rem;
     padding-bottom: .625rem;
@@ -5428,7 +5428,7 @@ ol.pxp-comments-list {
     padding: 1rem 1.3rem;
 }
 .pxp-user-modal .form-floating > .form-control:-webkit-autofill,
-.pxp-user-modal .form-floating > .form-control:focus, 
+.pxp-user-modal .form-floating > .form-control:focus,
 .pxp-user-modal .form-floating > .form-control:not(:placeholder-shown) {
     padding-top: 1.625rem;
     padding-bottom: .625rem;
@@ -5619,7 +5619,7 @@ ol.pxp-comments-list {
         padding-bottom: 60px;
         padding-right: 120px;
     }
-    .pxp-info-fig-image, 
+    .pxp-info-fig-image,
     .pxp-info-fig::before {
         height: 500px;
     }
@@ -5847,7 +5847,7 @@ ol.pxp-comments-list {
     }
 }
 @media screen and (max-width: 1139px) {
-    
+
 }
 @media screen and (max-width: 991px) {
     .pxp-hero h1 {
@@ -5919,10 +5919,10 @@ ol.pxp-comments-list {
     .pxp-jobs-card-4.active .pxp-jobs-card-4-company-logo {
         border: 0 none;
     }
-    .pxp-jobs-card-4.active .pxp-jobs-card-4-title, 
-    .pxp-jobs-card-4.active .pxp-jobs-card-4-location, 
-    .pxp-jobs-card-4.active .pxp-jobs-card-4-type, 
-    .pxp-jobs-card-4.active .pxp-jobs-card-4-company, 
+    .pxp-jobs-card-4.active .pxp-jobs-card-4-title,
+    .pxp-jobs-card-4.active .pxp-jobs-card-4-location,
+    .pxp-jobs-card-4.active .pxp-jobs-card-4-type,
+    .pxp-jobs-card-4.active .pxp-jobs-card-4-company,
     .pxp-jobs-card-4.active .pxp-jobs-card-4-date {
         color: var(--pxpTextColor);
     }
@@ -6013,7 +6013,7 @@ ol.pxp-comments-list {
     .pxp-hero-form-round.pxp-bigger form .pxp-has-left-border {
         border-left: 0 none;
     }
-    .pxp-hero-form-round.pxp-bigger form .form-control, 
+    .pxp-hero-form-round.pxp-bigger form .form-control,
     .pxp-hero-form-round.pxp-bigger form .form-select {
         padding-left: 0;
         padding-right: 0;
@@ -6130,7 +6130,7 @@ ol.pxp-comments-list {
     .pxp-hero-form-round form .pxp-has-left-border {
         border-left: 0 none;
     }
-    .pxp-hero-form-round form .form-control, 
+    .pxp-hero-form-round form .form-control,
     .pxp-hero-form-round form .form-select {
         padding-left: 0;
         padding-right: 0;
@@ -6151,7 +6151,7 @@ ol.pxp-comments-list {
     .pxp-info-stats {
         display: none;
     }
-    .pxp-info-fig-image, 
+    .pxp-info-fig-image,
     .pxp-info-fig::before {
         height: 400px;
     }
@@ -6191,13 +6191,13 @@ ol.pxp-comments-list {
     .pxp-companies-card-1-bottom {
         margin-top: 20px;
     }
-    .pxp-jobs-card-1, 
-    .pxp-jobs-card-2, 
+    .pxp-jobs-card-1,
+    .pxp-jobs-card-2,
     .pxp-jobs-card-3 {
         padding: 20px;
     }
-    .pxp-jobs-card-1-company-logo, 
-    .pxp-jobs-card-2-company-logo, 
+    .pxp-jobs-card-1-company-logo,
+    .pxp-jobs-card-2-company-logo,
     .pxp-jobs-card-3-company-logo {
         width: 60px;
         height: 60px;

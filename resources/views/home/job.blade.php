@@ -127,7 +127,68 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
+                    <div class="mt-100">
+                        <div class="pxp-blog-comments-block">
+                            {{Session::get('info')}}
+                            <div class="pxp-blog-post-comments">
+                                <h4>{{\App\Http\Controllers\HomeController::getCommentNumber($reviews)}} Comments</h4>
+                                <div class="mt-3 mt-lg-4">
+                                    <ol class="pxp-comments-list">
+                                        @foreach($reviews as $rs)
+                                        <li class="mt-3 mt-lg-4">
+                                            <div class="pxp-comments-list-item">
+                                                <img src="{{asset("assets/images/profile.png")}}" alt="{{$rs->user->name}}">
+                                                <div class="pxp-comments-list-item-body">
+                                                    <h5>{{$rs->user->name}}</h5>
+                                                    <div class="pxp-comments-list-item-date">{{$rs->created_at}}</div>
+                                                    <div class="pxp-comments-list-item-date">Rate: {{$rs->rate}}</div>
+                                                    <div class="pxp-comments-list-item-content mt-2">{{$rs->review}}</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        @endforeach
+                                    </ol>
+                                </div>
+                                <div class="mt-3 mt-lg-4">
+                                    <h4>Leave a Reply</h4>
+                                    <form class="pxp-comments-form" action="{{route('storecomment')}}" method="post">
+                                        @csrf
+                                        <input type="text" class="form-control" id="job_id" name="job_id" value="{{$data->id}}" hidden>
+                                        <div class="mt-3 mt-lg- mb-3">
+                                            <label for="pxp-comments-comment" class="form-label">Subject</label>
+                                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                        </div>
+                                        <div class="mt-3 mt-lg- mb-3">
+                                            <label for="pxp-comments-comment" class="form-label">Review</label>
+                                            <textarea class="form-control" id="review" name="review" placeholder="Type your comment here..."></textarea>
+                                        </div>
+                                        <div class="mt-3 mt-lg- mb-3">
+                                            <label for="pxp-comments-rate" class="form-label">Rate</label>
+                                            <input type="radio" class="form-check-input" name="rate" value="1">
+                                            <span class="ir">1</span>
+                                            <input type="radio" class="form-check-input" name="rate" value="2">
+                                            <span class="ir">2</span>
+                                            <input type="radio" class="form-check-input" name="rate" value="3">
+                                            <span class="ir">3</span>
+                                            <input type="radio" class="form-check-input" name="rate" value="4">
+                                            <span class="ir">4</span>
+                                            <input type="radio" class="form-check-input" name="rate" value="5">
+                                            <span class="ir">5</span>
+
+                                        </div>
+                                        @auth
+                                            <button type="submit" class="btn rounded-pill pxp-section-cta">Post Comment</button>
+                                        @else
+
+                                            <a href="/login" class="btn rounded-pill pxp-section-cta">Please Login</a>
+
+                                        @endauth
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>

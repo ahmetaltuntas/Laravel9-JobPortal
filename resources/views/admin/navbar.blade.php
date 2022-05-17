@@ -36,7 +36,7 @@
         </ul>
     </li>
     <li>
-        <a href="/">
+        <a href="{{route("admin.comment.index")}}">
             <div class="parent-icon"><i class='bx bx-comment'></i>
             </div>
             <div class="menu-title">Comments</div>

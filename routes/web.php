@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminPanel\AdminJobController;
+use App\Http\Controllers\AdminPanel\CommentController;
 use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\MessageController;
 use App\Http\Controllers\HomeController;
@@ -34,6 +35,7 @@ Route::get('/sign-in', [HomeController::class,'signin'])->name('sign-in');
 Route::get('/sign-up', [HomeController::class,'signup'])->name('sign-up');
 Route::get('/contactus', [HomeController::class,'contactus'])->name('contactus');
 Route::post('/storemessage', [HomeController::class,'storemessage'])->name('storemessage');
+Route::post('/storecomment', [HomeController::class,'storecomment'])->name('storecomment');
 Route::get('/job/{id}', [HomeController::class,'job'])->name('job');
 Route::get('/joblist', [HomeController::class,'joblist'])->name('joblist');
 Route::post('/joblist', [HomeController::class,'joblist'])->name('joblist');
@@ -82,6 +84,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
     });
 // ############### Admin Message ##################
     Route::prefix('/message')->name('message.')->controller(MessageController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/show/{id}', 'show')->name('show');
+        Route::get('/destroy/{id}', 'destroy')->name('destroy');
+
+    });
+// ############### Admin Comment ##################
+    Route::prefix('/comment')->name('comment.')->controller(CommentController::class)->group(function () {
         Route::get('/', 'index')->name('index');
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/show/{id}', 'show')->name('show');

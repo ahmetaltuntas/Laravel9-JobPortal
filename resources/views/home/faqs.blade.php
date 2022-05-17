@@ -2,7 +2,6 @@
 
 @section('title', 'FAQS')
 
-
 @section('content')
 
     <section class="mt-100 pxp-no-hero">
@@ -31,5 +30,6 @@
                 </div>
             </div>
         </div>
+
     </section>
 @endsection
