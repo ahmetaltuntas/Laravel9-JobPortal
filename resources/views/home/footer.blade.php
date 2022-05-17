@@ -103,18 +103,19 @@
                     <img src="{{asset("assets")}}/images/signin-fig.png" alt="Sign in">
                 </div>
                 <h5 class="modal-title text-center mt-4" id="signinModal">Welcome back!</h5>
-                <form class="mt-4">
+                <form class="mt-4" method="POST" action="{{ route('login') }}">
+                    @csrf
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="pxp-signin-email" placeholder="Email address">
-                        <label for="pxp-signin-email">Email address</label>
+                        <input  class="form-control" id="email" type="email" name="email" required="required" autofocus="autofocus">
+                        <label for="email">Email address</label>
                         <span class="fa fa-envelope-o"></span>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="pxp-signin-password" placeholder="Password">
-                        <label for="pxp-signin-password">Password</label>
+                        <input  class="form-control" id="password" type="password" name="password" required="required" autocomplete="current-password">
+                        <label for="password">Password</label>
                         <span class="fa fa-lock"></span>
                     </div>
-                    <a href="#" class="btn rounded-pill pxp-modal-cta">Continue</a>
+                    <button type="submit" class="btn rounded-pill pxp-sign-hero-form-cta">Continue</button>
                     <div class="mt-4 text-center pxp-modal-small">
                         <a href="#" class="pxp-modal-link">Forgot password</a>
                     </div>
@@ -138,18 +139,29 @@
                     <img src="{{asset("assets")}}/images/signup-fig.png" alt="Sign up">
                 </div>
                 <h5 class="modal-title text-center mt-4" id="signupModal">Create an account</h5>
-                <form class="mt-4">
+                <form class="mt-4" method="POST" action="{{ route('register') }}">
+                    @csrf
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="pxp-signup-email" placeholder="Email address">
-                        <label for="pxp-signup-email">Email address</label>
+                        <input  class="form-control" id="name" type="text" name="name" required="required" autofocus="autofocus" autocomplete="name">
+                        <label class="pxp-signup-page-email" for="name">Name</label>
                         <span class="fa fa-envelope-o"></span>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="pxp-signup-password" placeholder="Create password">
-                        <label for="pxp-signup-password">Create password</label>
+                        <input class="form-control" id="email" type="email" name="email" required="required">
+                        <label class="pxp-signup-page-email" for="email">Email</label>
+                        <span class="fa fa-envelope-o"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input  class="form-control" id="password" type="password" name="password" required="required" autocomplete="new-password">
+                        <label class="pxp-signup-page-password" for="password">Password</label>
                         <span class="fa fa-lock"></span>
                     </div>
-                    <a href="#" class="btn rounded-pill pxp-modal-cta">Continue</a>
+                    <div class="form-floating mb-3">
+                        <input  class="form-control" id="password_confirmation" type="password" name="password_confirmation" required="required" autocomplete="new-password">
+                        <label class="pxp-signup-page-password" for="password_confirmation">Confirm Password</label>
+                        <span class="fa fa-lock"></span>
+                    </div>
+                    <button type="submit" class="btn rounded-pill pxp-sign-hero-form-cta">Continue</button>
                     <div class="mt-4 text-center pxp-modal-small">
                         Already have an account? <a role="button" class="" data-bs-target="#pxp-signin-modal" data-bs-toggle="modal">Sign in</a>
                     </div>

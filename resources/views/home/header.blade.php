@@ -337,9 +337,25 @@
                     </li>
                 </ul>
             </nav>
-            <nav class="pxp-user-nav d-none d-sm-flex">
+            <nav class="pxp-user-nav d-none dropdown-hover-all d-sm-flex">
                 <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
-                <a class="btn rounded-pill pxp-user-nav-trigger pxp-on-light" data-bs-toggle="modal" href="#pxp-signin-modal" role="button">Sign in</a>
+                @auth
+                    <div class="dropdown pxp-user-nav-dropdown">
+                        <a class="dropdown-toggle" data-bs-toggle="dropdown">
+                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url({{asset("assets/images/profile.png")}});"></div>
+                            <div class="pxp-user-nav-name d-none d-md-block">{{Auth::user()->name}}</div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="company-dashboard-profile.html">Edit profile</a></li>
+                            <li><a class="dropdown-item" href="{{'log-out'}}">Logout</a></li>
+
+                        </ul>
+                    </div>
+                @endauth
+                @guest
+                    <a class="btn rounded-pill pxp-user-nav-trigger pxp-on-light" data-bs-toggle="modal" href="#pxp-signin-modal" role="button">Sign in</a>
+                @endguest
             </nav>
         </div>
     </div>

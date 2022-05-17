@@ -7,7 +7,7 @@
     <div class="offcanvas offcanvas-start pxp-nav-mobile-container" tabindex="-1" id="pxpMobileNav">
         <div class="offcanvas-header">
             <div class="pxp-logo">
-                <a href="index-2.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                <a href="index-2.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">J</span>ob<span style="color: var(--pxpMainColor)">P</span>ortal</a>
             </div>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>

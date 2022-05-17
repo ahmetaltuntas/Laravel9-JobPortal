@@ -41,6 +41,7 @@ Route::get('/joblist', [HomeController::class,'joblist'])->name('joblist');
 Route::post('/joblist', [HomeController::class,'joblist'])->name('joblist');
 Route::get('/references', [HomeController::class,'references'])->name('references');
 Route::get('/dropdown', [HomeController::class,'dropdown'])->name('dropdown');
+Route::get('/log-out', [HomeController::class,'logout'])->name('log-out');
 
 
 // ############### Admin Panel ##################
