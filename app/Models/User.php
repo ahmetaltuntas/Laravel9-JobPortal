@@ -70,5 +70,7 @@ class User extends Authenticatable
     public function usercv(){
         return $this->hasOne(UserCV::class);
     }
-
+    public function applications(){
+        return $this->hasMany(Application::class);
+    }
 }

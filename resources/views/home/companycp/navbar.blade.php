@@ -13,7 +13,7 @@
             <li @if(basename($_SERVER['REQUEST_URI'])=="companyprofile") class="pxp-active" @endif><a href="{{route('companycp.profile')}}"><span class="fa fa-pencil"></span>Edit Profile</a></li>
             <li @if(basename($_SERVER['REQUEST_URI'])=="newjob") class="pxp-active" @endif><a href="{{route('companycp.newjob')}}"><span class="fa fa-file-text-o"></span>New Job Offer</a></li>
             <li @if(basename($_SERVER['REQUEST_URI'])=="jobs") class="pxp-active" @endif><a href="{{route('companycp.jobs')}}"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
-            <li><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
+            <li @if(basename($_SERVER['REQUEST_URI'])=="candidates") class="pxp-active" @endif><a href="{{route('companycp.candidates')}}"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
             <li><a href="company-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
         </ul>
     </nav>

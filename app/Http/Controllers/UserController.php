@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Application;
 use App\Models\Comment;
 use App\Models\Education;
 use App\Models\Experience;
@@ -11,6 +12,7 @@ use App\Models\Skill;
 use App\Models\User;
 use App\Models\UserCV;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -25,10 +27,12 @@ class UserController extends Controller
     {
         $data = User::all();
         $settings= Setting::first();
+        $data2 = Application::where('user_id','=',Auth::id());
 
         return view('home.user.index',[
             'data' => $data,
-            'settings' => $settings
+            'settings' => $settings,
+            'data2' => $data2
         ]);
     }
     public function profile()

@@ -21,10 +21,12 @@ class CompanyController extends Controller
     {
         $data = User::all();
         $settings= Setting::first();
+        $job = Job::where('user_id','=',Auth::id())->get();
 
         return view('home.companycp.index',[
             'data' => $data,
-            'settings' => $settings
+            'settings' => $settings,
+            'job' => $job
         ]);
     }
     public function profile()
@@ -118,7 +120,44 @@ class CompanyController extends Controller
             'settings' => $settings
         ]);
     }
+    public function showjob($id)
+    {
+        $data = Job::find($id);
+        return view('home.companycp.showjob',[
+            'data' => $data
+        ]);
+    }
+    public function editjob($id)
+    {
+        $data = Job::find($id);
+        $datalist = Category::all();
+        return view('home.companycp.editjob',[
+            'data' => $data,
+            'datalist'=>$datalist
+        ]);
+    }
+    public function updatejob(Request $request,$id)
+    {
+        //
+        $data= Job::find($id);
+        $data->category_id = $request->category_id;
+        $data->title = $request->title;
+        $data->keywords = $request->keywords;
+        $data->description = $request->description;
+        $data->typeof = $request->typeof;
+        $data->experience = $request->experience;
+        $data->level = $request->level;
+        $data->location = $request->location;
+        $data->salary = $request->salary;
+        $data->status = $request->status;
+        if($request->file('image')){
+            $data->image=$request->file('image')->store('images');
+        }
+        $data->save();
 
+
+        return redirect(route('companycp.editjob',['id'=>$id]));
+    }
     /**
      * Show the form for editing the specified resource.
      *

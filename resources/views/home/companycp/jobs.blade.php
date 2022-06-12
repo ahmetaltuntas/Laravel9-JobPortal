@@ -34,7 +34,8 @@
                         <th style="width: 20%;">Category</th>
                         <th style="width: 12%;">Type</th>
                         <th style="width: 15%;">Applications</th>
-                        <th>Date<span class="fa fa-angle-up ms-3"></span></th>
+                        <th style="width: 15%;">Status</th>
+                        <th style="width: 15%;">Date<span class="fa fa-angle-up ms-3"></span></th>
                         <th>&nbsp;</th>
                     </tr>
                     </thead>
@@ -49,16 +50,17 @@
                         </td>
                         <td><div class="pxp-company-dashboard-job-category">{{\App\Http\Controllers\HomeController::getCategoryName($rs->category_id)}}</div></td>
                         <td><div class="pxp-company-dashboard-job-type">{{$rs->typeof}}</div></td>
-                        <td><a href="#" class="pxp-company-dashboard-job-applications">3 Candidates</a></td>
+                        <td><a href="{{route('companycp.candidates')}}" class="pxp-company-dashboard-job-applications">{{$rs->applications->count()}} Candidates</a></td>
                         <td>
                             <div class="pxp-company-dashboard-job-status"><span class="badge rounded-pill bg-black">{{$rs->status}}</span></div>
-                            <div class="pxp-company-dashboard-job-date mt-1">2020/08/24 at 11:56 am</div>
+                        </td>
+                        <td>                            <div class="pxp-company-dashboard-job-date mt-1">{{$rs->created_at}}</div>
                         </td>
                         <td>
                             <div class="pxp-dashboard-table-options">
                                 <ul class="list-unstyled">
-                                    <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                    <li><button title="Preview"><span class="fa fa-eye"></span></button></li>
+                                    <li><a href="{{route('companycp.editjob',['id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')"><button title="Edit"><span class="fa fa-pencil"></span></button></a></li>
+                                    <li><a href="{{route('companycp.showjob',['id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')"><button title="Preview"><span class="fa fa-eye"></span></button></a></li>
                                     <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
                                 </ul>
                             </div>

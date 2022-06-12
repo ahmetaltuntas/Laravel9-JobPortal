@@ -10,7 +10,7 @@
         <ul class="list-unstyled">
             <li @if(basename($_SERVER['REQUEST_URI'])=="index" or basename($_SERVER['REQUEST_URI'])=="user") class="pxp-active" @endif><a href="{{route('user.index')}}"><span class="fa fa-home"></span>Dashboard</a></li>
             <li @if(basename($_SERVER['REQUEST_URI'])=="profile") class="pxp-active" @endif><a href="{{route('user.profile')}}"><span class="fa fa-pencil"></span>Edit Profile</a></li>
-            <li><a href="candidate-dashboard-applications.html"><span class="fa fa-file-text-o"></span>Applications</a></li>
+            <li @if(basename($_SERVER['REQUEST_URI'])=="applications") class="pxp-active" @endif><a href="{{route('user.applications')}}"><span class="fa fa-file-text-o"></span>Applications</a></li>
             <li @if(basename($_SERVER['REQUEST_URI'])=="comments") class="pxp-active" @endif><a href="{{route('user.comments')}}"><span class="fa fa-heart-o"></span>Comments</a></li>
             <li><a href="candidate-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
         </ul>

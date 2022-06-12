@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminPanel\AdminUserController;
 use App\Http\Controllers\AdminPanel\CommentController;
 use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\MessageController;
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
@@ -47,8 +48,16 @@ Route::get('/references', [HomeController::class,'references'])->name('reference
 Route::get('/dropdown', [HomeController::class,'dropdown'])->name('dropdown');
 Route::get('/log-out', [HomeController::class,'logout'])->name('log-out');
 
+// ############### Application Panel ##################
+Route::prefix('application')->name('application.')->controller(ApplicationController::class)->group(function () {
+    Route::post('/apply', 'apply')->name('apply');
+
+
+});
+
 Route::get('/admin/login', [AdminHomeController::class, 'login'])->name('admin.login');
 Route::post('/admin/adminlogin', [AdminHomeController::class, 'adminlogin'])->name('admin.adminlogin');
+
 
 // ############### User Panel ##################
 Route::middleware('user')->prefix('user')->name('user.')->group(function () {
@@ -63,6 +72,7 @@ Route::middleware('user')->prefix('user')->name('user.')->group(function () {
     Route::get('/deleteexperience/{id}', [UserController::class, 'deleteexperience'])->name('deleteexperience');
     Route::post('/addeducation', [UserController::class, 'addeducation'])->name('addeducation');
     Route::post('/saveprofile', [UserController::class, 'saveprofile'])->name('saveprofile');
+    Route::get('/applications', [ApplicationController::class, 'userapplications'])->name('applications');
 
 });
 
@@ -73,8 +83,14 @@ Route::middleware('company')->prefix('companycp')->name('companycp.')->group(fun
     Route::get('/companyprofile', [CompanyController::class, 'profile'])->name('profile');
     Route::get('/newjob', [CompanyController::class, 'newjob'])->name('newjob');
     Route::get('/jobs', [CompanyController::class, 'jobs'])->name('jobs');
+    Route::get('/showjob/{id}', [CompanyController::class, 'showjob'])->name('showjob');
+    Route::get('/editjob/{id}', [CompanyController::class, 'editjob'])->name('editjob');
+    Route::post('/updatejob/{id}', [CompanyController::class, 'updatejob'])->name('updatejob');
     Route::post('/storejob', [CompanyController::class, 'storejob'])->name('storejob');
     Route::post('/saveprofile', [CompanyController::class, 'saveprofile'])->name('saveprofile');
+    Route::get('/candidates', [ApplicationController::class, 'candidates'])->name('candidates');
+    Route::get('/approve/{id}', [ApplicationController::class, 'approve'])->name('approve');
+    Route::get('/reject/{id}', [ApplicationController::class, 'reject'])->name('reject');
 
 });
 
