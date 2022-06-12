@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Job;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class AdminJobController extends Controller
@@ -37,7 +38,6 @@ class AdminJobController extends Controller
         return view('admin.job.create',[
             'data' => $data
         ]);
-        return view('admin.job.create');
     }
 
     /**
@@ -51,7 +51,7 @@ class AdminJobController extends Controller
         //
         $data = new Job();
         $data->category_id = $request->category_id;
-        $data->user_id = 0;//$request->user_id;
+        $data->user_id = Auth::id();
         $data->title = $request->title;
         $data->keywords = $request->keywords;
         $data->description = $request->description;

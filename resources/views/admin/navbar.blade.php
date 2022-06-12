@@ -50,7 +50,7 @@
         </a>
     </li>
     <li>
-        <a href="/">
+        <a href="{{route("admin.user.index")}}">
             <div class="parent-icon"><i class='bx bx-user-circle'></i>
             </div>
             <div class="menu-title">Users</div>

@@ -61,4 +61,14 @@ class User extends Authenticatable
     public function reviews(){
         return $this->hasMany(Comment::class);
     }
+    public function roles(){
+        return $this->belongsToMany(Role::class,'role_users');
+    }
+    public function profiles(){
+        return $this->hasOne(Profile::class,'user_id');
+    }
+    public function usercv(){
+        return $this->hasOne(UserCV::class);
+    }
+
 }

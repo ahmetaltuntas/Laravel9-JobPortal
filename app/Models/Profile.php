@@ -5,20 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Job extends Model
+class Profile extends Model
 {
     use HasFactory;
-    //many to one
-    public function category(){
-
-        return $this->belongsTo(Category::class);
-    }
-    public function reviews(){
-
-        return $this->hasMany(Comment::class);
-    }
     public function user(){
-
         return $this->belongsTo(User::class);
     }
 }

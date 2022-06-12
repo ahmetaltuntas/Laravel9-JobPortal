@@ -84,54 +84,44 @@
                             <div class="pxp-single-job-side-company">
                                 <div class="pxp-single-job-side-company-logo pxp-cover" style="background-image: url(images/company-logo-2.png);"></div>
                                 <div class="pxp-single-job-side-company-profile">
-                                    <div class="pxp-single-job-side-company-name">Craftgenics</div>
-                                    <a href="single-company-1.html">View profile</a>
+                                    <div class="pxp-single-job-side-company-name">{{$data->user->name}}</div>
+                                    <a href="{{route('showprofile',['id'=>$data->user->id])}}">View profile</a>
                                 </div>
                             </div>
                             <div class="mt-4">
                                 <div class="pxp-single-job-side-info-label pxp-text-light">Industry</div>
-                                <div class="pxp-single-job-side-info-data">Software</div>
+                                <div class="pxp-single-job-side-info-data">{{$data->user->profiles->industry}}</div>
                             </div>
                             <div class="mt-4">
                                 <div class="pxp-single-job-side-info-label pxp-text-light">Company size</div>
-                                <div class="pxp-single-job-side-info-data">50-100</div>
+                                <div class="pxp-single-job-side-info-data">{{$data->user->profiles->size}}</div>
                             </div>
                             <div class="mt-4">
                                 <div class="pxp-single-job-side-info-label pxp-text-light">Founded in</div>
-                                <div class="pxp-single-job-side-info-data">2005</div>
+                                <div class="pxp-single-job-side-info-data">{{$data->user->profiles->founded}}</div>
                             </div>
                             <div class="mt-4">
                                 <div class="pxp-single-job-side-info-label pxp-text-light">Phone</div>
-                                <div class="pxp-single-job-side-info-data">0124 456 789</div>
+                                <div class="pxp-single-job-side-info-data">{{$data->user->profiles->phone}}</div>
                             </div>
                             <div class="mt-4">
                                 <div class="pxp-single-job-side-info-label pxp-text-light">Email</div>
-                                <div class="pxp-single-job-side-info-data">office@craftgenics.com</div>
+                                <div class="pxp-single-job-side-info-data">{{$data->user->email}}</div>
                             </div>
                             <div class="mt-4">
                                 <div class="pxp-single-job-side-info-label pxp-text-light">Location</div>
-                                <div class="pxp-single-job-side-info-data">Los Angeles, CA</div>
+                                <div class="pxp-single-job-side-info-data">{{$data->user->profiles->address}}</div>
                             </div>
                             <div class="mt-4">
                                 <div class="pxp-single-job-side-info-label pxp-text-light">Website</div>
-                                <div class="pxp-single-job-side-info-data"><a href="#">www.craftgenics.com</a></div>
-                            </div>
-                            <div class="mt-4">
-                                <div class="pxp-single-job-side-info-data">
-                                    <ul class="list-unstyled pxp-single-job-side-info-social">
-                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                    </ul>
-                                </div>
+                                <div class="pxp-single-job-side-info-data"><a href="{{$data->user->profiles->website}}">{{$data->user->profiles->website}}</a></div>
                             </div>
                         </div>
 
                     </div>
                     <div class="mt-100">
                         <div class="pxp-blog-comments-block">
-                            {{Session::get('info')}}
+                            {{Session::get('email')}}
                             <div class="pxp-blog-post-comments">
                                 <h4>{{$reviews->count('id')}} Comments</h4>
                                 <div class="mt-3 mt-lg-4">

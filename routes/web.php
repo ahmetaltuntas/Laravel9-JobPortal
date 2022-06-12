@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\AdminPanel\AdminJobController;
+use App\Http\Controllers\AdminPanel\AdminUserController;
 use App\Http\Controllers\AdminPanel\CommentController;
 use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\MessageController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Models\Job;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
@@ -37,15 +40,46 @@ Route::get('/contactus', [HomeController::class,'contactus'])->name('contactus')
 Route::post('/storemessage', [HomeController::class,'storemessage'])->name('storemessage');
 Route::post('/storecomment', [HomeController::class,'storecomment'])->name('storecomment');
 Route::get('/job/{id}', [HomeController::class,'job'])->name('job');
+Route::get('/showprofile/{id}', [HomeController::class,'showprofile'])->name('showprofile');
 Route::get('/joblist', [HomeController::class,'joblist'])->name('joblist');
 Route::post('/joblist', [HomeController::class,'joblist'])->name('joblist');
 Route::get('/references', [HomeController::class,'references'])->name('references');
 Route::get('/dropdown', [HomeController::class,'dropdown'])->name('dropdown');
 Route::get('/log-out', [HomeController::class,'logout'])->name('log-out');
 
+Route::get('/admin/login', [AdminHomeController::class, 'login'])->name('admin.login');
+Route::post('/admin/adminlogin', [AdminHomeController::class, 'adminlogin'])->name('admin.adminlogin');
+
+// ############### User Panel ##################
+Route::middleware('user')->prefix('user')->name('user.')->group(function () {
+    Route::get('/', [UserController::class, 'index'])->name('index');
+    Route::get('/index', [UserController::class, 'index'])->name('index');
+    Route::get('/userprofile', [UserController::class, 'profile'])->name('profile');
+    Route::get('/comments', [UserController::class, 'comments'])->name('comments');
+    Route::get('/destroycomment/{id}', [UserController::class, 'destroycomment'])->name('destroycomment');
+    Route::post('/addskill', [UserController::class, 'addskill'])->name('addskill');
+    Route::get('/deleteskill/{id}', [UserController::class, 'deleteskill'])->name('deleteskill');
+    Route::post('/addexperience', [UserController::class, 'addexperience'])->name('addexperience');
+    Route::get('/deleteexperience/{id}', [UserController::class, 'deleteexperience'])->name('deleteexperience');
+    Route::post('/addeducation', [UserController::class, 'addeducation'])->name('addeducation');
+    Route::post('/saveprofile', [UserController::class, 'saveprofile'])->name('saveprofile');
+
+});
+
+// ############### Company Panel ##################
+Route::middleware('company')->prefix('companycp')->name('companycp.')->group(function () {
+    Route::get('/', [CompanyController::class, 'index'])->name('index');
+    Route::get('/index', [CompanyController::class, 'index'])->name('index');
+    Route::get('/companyprofile', [CompanyController::class, 'profile'])->name('profile');
+    Route::get('/newjob', [CompanyController::class, 'newjob'])->name('newjob');
+    Route::get('/jobs', [CompanyController::class, 'jobs'])->name('jobs');
+    Route::post('/storejob', [CompanyController::class, 'storejob'])->name('storejob');
+    Route::post('/saveprofile', [CompanyController::class, 'saveprofile'])->name('saveprofile');
+
+});
 
 // ############### Admin Panel ##################
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminHomeController::class, 'index'])->name('index');
     Route::get('/faq', [AdminHomeController::class, 'faq'])->name('faq');
 
@@ -97,6 +131,17 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/show/{id}', 'show')->name('show');
         Route::get('/destroy/{id}', 'destroy')->name('destroy');
+
+    });
+// ############### Admin User ##################
+    Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/show/{id}', 'show')->name('show');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::get('/destroy/{uid}', 'destroy')->name('destroy');
+        Route::get('/destroyrole/{uid}/{rid}', 'destroyrole')->name('destroyrole');
+        Route::post('/addrole/{id}', 'addrole')->name('addrole');
 
     });
 // ############### Faq ##################

@@ -96,140 +96,7 @@
     <section class="mt-100">
         <div class="pxp-container">
             <div class="row">
-                <div class="col-lg-5 col-xl-4 col-xxl-3">
-                    <div class="pxp-jobs-list-side-filter">
-                        <div class="pxp-list-side-filter-header d-flex d-lg-none">
-                            <div class="pxp-list-side-filter-header-label">Filter Jobs</div>
-                            <a role="button"><span class="fa fa-sliders"></span></a>
-                        </div>
-                        <div class="mt-4 mt-lg-0 d-lg-block pxp-list-side-filter-panel">
-                            <h3>Type of Employment</h3>
-                            <div class="list-group mt-2 mt-lg-3">
-                                <label class="list-group-item d-flex justify-content-between align-items-center pxp-checked">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="" checked>
-                                            Full Time
-                                        </span>
-                                    <span class="badge rounded-pill">56</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="">
-                                            Part Time
-                                        </span>
-                                    <span class="badge rounded-pill">34</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="">
-                                            Remote
-                                        </span>
-                                    <span class="badge rounded-pill">24</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="">
-                                            Internship
-                                        </span>
-                                    <span class="badge rounded-pill">27</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="">
-                                            Contract
-                                        </span>
-                                    <span class="badge rounded-pill">76</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="">
-                                            Training
-                                        </span>
-                                    <span class="badge rounded-pill">28</span>
-                                </label>
-                            </div>
-
-                            <h3 class="mt-3 mt-lg-4">Experience Level</h3>
-                            <div class="list-group mt-2 mt-lg-3">
-                                <label class="list-group-item d-flex justify-content-between align-items-center">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="">
-                                            No Experience
-                                        </span>
-                                    <span class="badge rounded-pill">98</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3 pxp-checked">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="" checked>
-                                            Entry-Level
-                                        </span>
-                                    <span class="badge rounded-pill">44</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3 pxp-checked">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="" checked>
-                                            Mid-Level
-                                        </span>
-                                    <span class="badge rounded-pill">35</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="">
-                                            Senior-Level
-                                        </span>
-                                    <span class="badge rounded-pill">45</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="">
-                                            Manager / Executive
-                                        </span>
-                                    <span class="badge rounded-pill">21</span>
-                                </label>
-                            </div>
-
-                            <h3 class="mt-3 mt-lg-4">Salary Range</h3>
-                            <div class="list-group mt-2 mt-lg-3">
-                                <label class="list-group-item d-flex justify-content-between align-items-center pxp-checked">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="" checked>
-                                            $700 - $1000
-                                        </span>
-                                    <span class="badge rounded-pill">34</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3 pxp-checked">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="" checked>
-                                            $1000 - $1200
-                                        </span>
-                                    <span class="badge rounded-pill">22</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="">
-                                            $1200 - $1400
-                                        </span>
-                                    <span class="badge rounded-pill">67</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="">
-                                            $1500 - $1800
-                                        </span>
-                                    <span class="badge rounded-pill">12</span>
-                                </label>
-                                <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
-                                        <span class="d-flex">
-                                            <input class="form-check-input me-2" type="checkbox" value="">
-                                            $2000 - $3000
-                                        </span>
-                                    <span class="badge rounded-pill">26</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-xl-8 col-xxl-9">
+                <div class="">
                     <div class="pxp-jobs-list-top mt-4 mt-lg-0">
                         <div class="row justify-content-between align-items-center">
                             <div class="col-auto">
@@ -257,7 +124,7 @@
                         <div class="col-xxl-6 pxp-jobs-card-2-container">
                             <div class="pxp-jobs-card-2 pxp-has-border">
                                 <div class="pxp-jobs-card-2-top">
-                                    <a href="single-company-1.html" class="pxp-jobs-card-2-company-logo" style="background-image: url({{Storage::url($rs->image)}});"></a>
+                                    <a href="" class="pxp-jobs-card-2-company-logo" style="background-image: url({{Storage::url($rs->image)}});"></a>
                                     <div class="pxp-jobs-card-2-info">
                                         <a href="/job/{{$rs->id}}" class="pxp-jobs-card-2-title">{{$rs->title}}</a>
                                         <div class="pxp-jobs-card-2-details">
@@ -274,7 +141,7 @@
                                         <div class="pxp-jobs-card-2-category-label">{{\App\Http\Controllers\HomeController::getCategoryName($rs->category_id)}}</div>
                                     </a>
                                     <div class="pxp-jobs-card-2-bottom-right">
-                                        <span class="pxp-jobs-card-2-date pxp-text-light">{{$rs->created_at}}</span> <a href="single-company-1.html" class="pxp-jobs-card-2-company">Artistre Studio</a>
+                                        <span class="pxp-jobs-card-2-date pxp-text-light">{{$rs->created_at}}</span> <a href="{{route('showprofile',['id'=>$rs->user_id])}}" class="pxp-jobs-card-2-company">{{$rs->user->name}}</a>
                                     </div>
                                 </div>
                             </div>
@@ -282,21 +149,7 @@
                         @endforeach
 
                     <div class="row mt-4 mt-lg-5 justify-content-between align-items-center">
-                        <!--
                         <div class="col-auto">
-                            <nav class="mt-3 mt-sm-0" aria-label="Jobs list pagination">
-                                <ul class="pagination pxp-pagination">
-                                    <li class="page-item active" aria-current="page">
-                                        <span class="page-link">1</span>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        -->
-                        <div class="col-auto">
-                            <a href="#" class="btn rounded-pill pxp-section-cta mt-3 mt-sm-0">Show me more<span class="fa fa-angle-right"></span></a>
                         </div>
                     </div>
                 </div>

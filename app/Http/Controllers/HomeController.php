@@ -7,7 +7,9 @@ use App\Models\Comment;
 use App\Models\Faq;
 use App\Models\Job;
 use App\Models\Message;
+use App\Models\Profile;
 use App\Models\Setting;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -76,6 +78,25 @@ class HomeController extends Controller
             'data' => $data,
             'reviews' => $reviews
         ]);
+    }
+    public function showprofile($id){
+
+        $data=User::find($id);
+        $userRoles = $data->roles->pluck('name');
+        $jobdata=Job::where('user_id','=',$id)->get();
+
+        if ($data!=null) {
+            return view('home.showprofile', [
+                'data' => $data,
+                'userRoles' => $userRoles,
+                'jobdata'=>$jobdata
+            ]);
+        }
+        else{
+            return view('errors.404');
+
+        }
+
     }
     public function joblist(Request $request){
 

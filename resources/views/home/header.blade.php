@@ -338,17 +338,16 @@
                 </ul>
             </nav>
             <nav class="pxp-user-nav d-none dropdown-hover-all d-sm-flex">
-                <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
                 @auth
                     <div class="dropdown pxp-user-nav-dropdown">
                         <a class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url({{asset("assets/images/profile.png")}});"></div>
+                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(@if(Auth::user()->profiles->image == null){{asset("assets/images/profile.png")}}@else {{Storage::url(Auth::user()->profiles->image)}}@endif);"></div>
                             <div class="pxp-user-nav-name d-none d-md-block">{{Auth::user()->name}}</div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="company-dashboard-profile.html">Edit profile</a></li>
-                            <li><a class="dropdown-item" href="{{'log-out'}}">Logout</a></li>
+                            <li><a class="dropdown-item" href="{{route('user.index')}}">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="{{route('user.profile')}}">Edit profile</a></li>
+                            <li><a class="dropdown-item" href="{{route('log-out')}}">Logout</a></li>
 
                         </ul>
                     </div>

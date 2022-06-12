@@ -2,8 +2,11 @@
 
 namespace App\Actions\Fortify;
 
+use App\Models\Profile;
+use App\Models\RoleUser;
 use App\Models\Team;
 use App\Models\User;
+use App\Models\UserCV;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -36,6 +39,7 @@ class CreateNewUser implements CreatesNewUsers
                 'password' => Hash::make($input['password']),
             ]), function (User $user) {
                 $this->createTeam($user);
+                $this->createProfile($user);
             });
         });
     }
@@ -53,5 +57,18 @@ class CreateNewUser implements CreatesNewUsers
             'name' => explode(' ', $user->name, 2)[0]."'s Team",
             'personal_team' => true,
         ]));
+    }
+    protected function createProfile(User $user)
+    {
+        $profile = New Profile();
+        $profile->user_id= $user->id;
+        $profile->save();
+        $data= new RoleUser();
+        $data->user_id=$user->id;
+        $data->role_id=2;
+        $data->save();
+        $cv = New UserCV();
+        $cv->user_id= $user->id;
+        $cv->save();
     }
 }
