@@ -2,7 +2,7 @@
 
 <div class="pxp-dashboard-side-panel d-none d-lg-block">
     <div class="pxp-logo">
-        <a href="{{route('user.index')}}" class="pxp-animate"><span style="color: var(--pxpMainColor)">J</span>ob<span style="color: var(--pxpMainColor)">P</span>ortal</a>
+        <a href="{{route('home')}}" class="pxp-animate"><span style="color: var(--pxpMainColor)">J</span>ob<span style="color: var(--pxpMainColor)">P</span>ortal</a>
     </div>
 
     <nav class="mt-3 mt-lg-4 d-flex justify-content-between flex-column pb-100">
@@ -12,7 +12,6 @@
             <li @if(basename($_SERVER['REQUEST_URI'])=="profile") class="pxp-active" @endif><a href="{{route('user.profile')}}"><span class="fa fa-pencil"></span>Edit Profile</a></li>
             <li @if(basename($_SERVER['REQUEST_URI'])=="applications") class="pxp-active" @endif><a href="{{route('user.applications')}}"><span class="fa fa-file-text-o"></span>Applications</a></li>
             <li @if(basename($_SERVER['REQUEST_URI'])=="comments") class="pxp-active" @endif><a href="{{route('user.comments')}}"><span class="fa fa-heart-o"></span>Comments</a></li>
-            <li><a href="candidate-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
         </ul>
     </nav>
 

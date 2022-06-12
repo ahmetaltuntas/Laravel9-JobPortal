@@ -109,13 +109,6 @@
 
                                 <h2><span class="pxp-text-light">Showing</span> {{$num}} <span class="pxp-text-light">jobs</span></h2>
                             </div>
-                            <div class="col-auto">
-                                <select class="form-select">
-                                    <option value="0" selected>Most relevant</option>
-                                    <option value="1">Newest</option>
-                                    <option value="2">Oldest</option>
-                                </select>
-                            </div>
                         </div>
                     </div>
 

@@ -29,61 +29,7 @@
                                     <a role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Find Jobs</a>
                                     <ul class="dropdown-menu">
                                         <li class="pxp-dropdown-header">Job Listings</li>
-                                        <li class="nav-item"><a href="/joblist">Top Search</a></li>
-
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Companies</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item dropdown">
-                                            <a role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Companies List</a>
-                                            <ul class="dropdown-menu">
-                                                <li class="nav-item"><a href="companies-list-1.html">Top Search</a></li>
-                                                <li class="nav-item"><a href="companies-list-2.html">Left Search Side Panel</a></li>
-                                                <li class="nav-item"><a href="companies-list-3.html">Top Search Light</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Single Company</a>
-                                            <ul class="dropdown-menu">
-                                                <li class="nav-item"><a href="single-company-1.html">Wide Content</a></li>
-                                                <li class="nav-item"><a href="single-company-2.html">Right Side Panel</a></li>
-                                                <li class="nav-item"><a href="single-company-3.html">Center Boxed Content</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item"><a href="company-dashboard.html">Company Dashboard</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Candidates</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item dropdown">
-                                            <a role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Candidates List</a>
-                                            <ul class="dropdown-menu">
-                                                <li class="nav-item"><a href="candidates-list-1.html">Top Search</a></li>
-                                                <li class="nav-item"><a href="candidates-list-2.html">Left Search Side Panel</a></li>
-                                                <li class="nav-item"><a href="candidates-list-3.html">Top Search Light</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Single Candidate</a>
-                                            <ul class="dropdown-menu">
-                                                <li class="nav-item"><a href="single-candidate-1.html">Wide Content</a></li>
-                                                <li class="nav-item"><a href="single-candidate-2.html">Right Side Panel</a></li>
-                                                <li class="nav-item"><a href="single-candidate-3.html">Center Boxed Content</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item"><a href="candidate-dashboard.html">Candidate Dashboard</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a href="blog-list-1.html">Articles Cards</a></li>
-                                        <li class="nav-item"><a href="blog-list-2.html">Articles List</a></li>
-                                        <li class="nav-item"><a href="blog-list-3.html">Articles Boxed</a></li>
-                                        <li class="nav-item"><a href="single-blog-post.html">Single Article</a></li>
+                                        <li class="nav-item"><a href="{{route('joblist')}}">Top Search</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -136,219 +82,58 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Companies</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown dropend">
-                                <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                                    <div class="pxp-dropdown-icon">
-                                        <span class="fa fa-th-large"></span>
-                                    </div>
-                                    <div class="pxp-dropdown-text">
-                                        Companies List
-                                        <span>List of companies versions</span>
-                                    </div>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="companies-list-1.html">
-                                            <div class="pxp-dropdown-text">
-                                                Top Search
-                                                <span>Companies list version 1</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="companies-list-2.html">
-                                            <div class="pxp-dropdown-text">
-                                                Left Search Side Panel
-                                                <span>Companies list version 2</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="companies-list-3.html">
-                                            <div class="pxp-dropdown-text">
-                                                Top Search Light
-                                                <span>Companies list version 3</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown dropend">
-                                <a class="dropdown-item dropdown-toggle pxp-has-icon-small" href="#" data-bs-toggle="dropdown">
-                                    <div class="pxp-dropdown-icon">
-                                        <span class="fa fa-file-text-o"></span>
-                                    </div>
-                                    <div class="pxp-dropdown-text">
-                                        Single Company
-                                        <span>Company profile page versions</span>
-                                    </div>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="single-company-1.html">
-                                            <div class="pxp-dropdown-text">
-                                                Wide Content
-                                                <span>Company profile version 1</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="single-company-2.html">
-                                            <div class="pxp-dropdown-text">
-                                                Right Side Panel
-                                                <span>Company profile version 2</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="single-company-3.html">
-                                            <div class="pxp-dropdown-text">
-                                                Center Boxed Content
-                                                <span>Company profile version 3</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="company-dashboard.html" class="pxp-has-icon-small">
-                                    <div class="pxp-dropdown-icon">
-                                        <span class="fa fa-cogs"></span>
-                                    </div>
-                                    <div class="pxp-dropdown-text">
-                                        Company Dashboard
-                                        <span>Useful insights and settings</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="{{route('aboutus')}}" class="dropdown-toggle">About Us</a>
+
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Candidates</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown dropend">
-                                <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                                    <div class="pxp-dropdown-icon">
-                                        <span class="fa fa-th-large"></span>
-                                    </div>
-                                    <div class="pxp-dropdown-text">
-                                        Candidates List
-                                        <span>List of candidates versions</span>
-                                    </div>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="candidates-list-1.html">
-                                            <div class="pxp-dropdown-text">
-                                                Top Search
-                                                <span>Candidates list version 1</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="candidates-list-2.html">
-                                            <div class="pxp-dropdown-text">
-                                                Left Search Side Panel
-                                                <span>Candidates list version 2</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="candidates-list-3.html">
-                                            <div class="pxp-dropdown-text">
-                                                Top Search Light
-                                                <span>Candidates list version 3</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown dropend">
-                                <a class="dropdown-item dropdown-toggle pxp-has-icon-small" href="#" data-bs-toggle="dropdown">
-                                    <div class="pxp-dropdown-icon">
-                                        <span class="fa fa-user-circle-o"></span>
-                                    </div>
-                                    <div class="pxp-dropdown-text">
-                                        Single Candidate
-                                        <span>Candidate profile page versions</span>
-                                    </div>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="single-candidate-1.html">
-                                            <div class="pxp-dropdown-text">
-                                                Wide Content
-                                                <span>Candidate profile version 1</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="single-candidate-2.html">
-                                            <div class="pxp-dropdown-text">
-                                                Right Side Panel
-                                                <span>Candidate profile version 2</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="single-candidate-3.html">
-                                            <div class="pxp-dropdown-text">
-                                                Center Boxed Content
-                                                <span>Candidate profile version 3</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="candidate-dashboard.html" class="pxp-has-icon-small">
-                                    <div class="pxp-dropdown-icon">
-                                        <span class="fa fa-cog"></span>
-                                    </div>
-                                    <div class="pxp-dropdown-text">
-                                        Candidate Dashboard
-                                        <span>Useful insights and settings</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="{{route('faqs')}}" class="dropdown-toggle">FAQs</a>
+
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="blog-list-1.html">Articles Cards</a></li>
-                            <li><a class="dropdown-item" href="blog-list-2.html">Articles List</a></li>
-                            <li><a class="dropdown-item" href="blog-list-3.html">Articles Boxed</a></li>
-                            <li><a class="dropdown-item" href="single-blog-post.html">Single Article</a></li>
-                        </ul>
+                        <a href="{{route('references')}}" class="dropdown-toggle">References</a>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="{{route('contactus')}}" class="dropdown-toggle">Contact Us</a>
+
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{route('aboutus')}}">About Us</a></li>
-                            <li><a class="dropdown-item" href="{{route('faqs')}}">FAQs</a></li>
-                            <li><a class="dropdown-item" href="{{route('references')}}">References</a></li>
-                            <li><a class="dropdown-item" href="{{route('contactus')}}">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="{{route('notfound')}}">404 Page</a></li>
                             <li><a class="dropdown-item" href="{{route('sign-in')}}">Sign In</a></li>
                             <li><a class="dropdown-item" href="{{route('sign-up')}}">Sign Up</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
-            <nav class="pxp-user-nav d-none dropdown-hover-all d-sm-flex">
+            <nav class="pxp-user-nav pxp-on-light">
                 @auth
                     <div class="dropdown pxp-user-nav-dropdown">
-                        <a class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(@if(Auth::user()->profiles->image == null){{asset("assets/images/profile.png")}}@else {{Storage::url(Auth::user()->profiles->image)}}@endif);"></div>
+                        <a href="index-2.html" class="dropdown-toggle" data-bs-toggle="dropdown">
+                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(@if(Auth::user()->profiles->image == null) {{asset("assets/images/profile.png")}} @else {{Storage::url(Auth::user()->profiles->image)}} @endif);"></div>
                             <div class="pxp-user-nav-name d-none d-md-block">{{Auth::user()->name}}</div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="{{route('user.index')}}">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="{{route('user.profile')}}">Edit profile</a></li>
-                            <li><a class="dropdown-item" href="{{route('log-out')}}">Logout</a></li>
+                            @if(Auth::user()->roles->pluck('name')->contains('admin'))
+                                <li><a class="dropdown-item" href="{{route('admin.index')}}">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="{{route('showprofile',['id'=>Auth::id()])}}">Profile</a></li>
+                                <li><a class="dropdown-item" href="{{route('user.profile')}}">Edit profile</a></li>
+                                <li><a class="dropdown-item" href="{{route('log-out')}}">Logout</a></li>
 
+                             @elseif(Auth::user()->roles->pluck('name')->contains('user'))
+                                <li><a class="dropdown-item" href="{{route('user.index')}}">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="{{route('showprofile',['id'=>Auth::id()])}}">Profile</a></li>
+                                <li><a class="dropdown-item" href="{{route('user.profile')}}">Edit profile</a></li>
+                                <li><a class="dropdown-item" href="{{route('log-out')}}">Logout</a></li>
+
+                             @elseif(Auth::user()->roles->pluck('name')->contains('company'))
+                                <li><a class="dropdown-item" href="{{route('companycp.index')}}">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="{{route('showprofile',['id'=>Auth::id()])}}">Profile</a></li>
+                                <li><a class="dropdown-item" href="{{route('companycp.profile')}}">Edit profile</a></li>
+                                <li><a class="dropdown-item" href="{{route('log-out')}}">Logout</a></li>
+
+                            @endif
                         </ul>
                     </div>
                 @endauth

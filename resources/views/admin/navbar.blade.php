@@ -18,8 +18,7 @@
             </li>
             <li> <a href="{{route('admin.job.create')}}"><i class="bx bx-right-arrow-alt"></i>New Job</a>
             </li>
-            <li> <a href="app-file-manager.html"><i class="bx bx-right-arrow-alt"></i>Pending Jobs</a>
-            </li>
+
         </ul>
     </li>
     <li>
@@ -50,17 +49,17 @@
         </a>
     </li>
     <li>
+        <a href="{{route("admin.application.index")}}">
+            <div class="parent-icon"><i class='bx bx-message'></i>
+            </div>
+            <div class="menu-title">Applications</div>
+        </a>
+    </li>
+    <li>
         <a href="{{route("admin.user.index")}}">
             <div class="parent-icon"><i class='bx bx-user-circle'></i>
             </div>
             <div class="menu-title">Users</div>
-        </a>
-    </li>
-    <li>
-        <a href="/">
-            <div class="parent-icon"><i class='bx bx-group'></i>
-            </div>
-            <div class="menu-title">Social</div>
         </a>
     </li>
     <li>

@@ -60,13 +60,14 @@ class HomeController extends Controller
 */
     public function index(){
 
-        $jobdata=Job::limit(6)->get();
+        $jobdata=Job::limit(8)->get();
         $catdata=Category::limit(12)->get();
         $settings= Setting::first();
+
         return view('home.index',[
             'catdata' => $catdata,
             'jobdata' => $jobdata,
-            'settings' => $settings
+            'settings' => $settings,
 
         ]);
     }

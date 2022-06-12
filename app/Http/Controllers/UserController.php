@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\Fortify\PasswordValidationRules;
 use App\Models\Application;
 use App\Models\Comment;
 use App\Models\Education;
@@ -14,7 +15,9 @@ use App\Models\UserCV;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -68,6 +71,7 @@ class UserController extends Controller
         $comments->delete();
         return redirect(route('user.comments'));
     }
+
     public function addskill(Request $request)
     {
         $data = new Skill();
@@ -100,6 +104,14 @@ class UserController extends Controller
     {
         //
         $data= Experience::find($id);
+        $data->delete();
+        return redirect(route('user.profile'));
+
+    }
+    public function deleteeducation($id)
+    {
+        //
+        $data= Education::find($id);
         $data->delete();
         return redirect(route('user.profile'));
 

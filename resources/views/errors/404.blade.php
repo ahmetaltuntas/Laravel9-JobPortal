@@ -1,4 +1,4 @@
-@extends('layouts.frontbase')
+@extends('layouts.companywindow')
 
 @section('title', '404 Not Found')
 
@@ -14,7 +14,7 @@
             </div>
 
             <div class="mt-4 mt-lg-5 text-center">
-                <a href="index.html" class="btn rounded-pill pxp-section-cta">Go Home<span class="fa fa-angle-right"></span></a>
+                <a href="{{route('home')}}" class="btn rounded-pill pxp-section-cta">Go Home<span class="fa fa-angle-right"></span></a>
             </div>
         </div>
     </section>

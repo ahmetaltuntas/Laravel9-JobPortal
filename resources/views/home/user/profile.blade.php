@@ -171,8 +171,7 @@
                                     <td>
                                         <div class="pxp-dashboard-table-options">
                                             <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
+                                                <li><a href="{{route('user.deleteeducation',['id'=>$rs->id])}}"><button title="Delete"><span class="fa fa-trash-o"></span></button></a></li>
                                             </ul>
                                         </div>
                                     </td>

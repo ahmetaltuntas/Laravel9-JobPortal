@@ -75,9 +75,13 @@ class ApplicationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function index()
     {
-        //
+        $data= Application::All();
+
+        return view('admin.application.index',[
+            'data' => $data
+        ]);
     }
 
     /**
@@ -88,7 +92,10 @@ class ApplicationController extends Controller
      */
     public function show($id)
     {
-        //
+        $data= Application::find($id);
+        return view('admin.application.show',[
+            'data' => $data
+        ]);
     }
 
     /**
@@ -122,6 +129,8 @@ class ApplicationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data= Application::find($id);
+        $data->delete();
+        return redirect(route('admin.application.index'));
     }
 }

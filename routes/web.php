@@ -70,6 +70,7 @@ Route::middleware('user')->prefix('user')->name('user.')->group(function () {
     Route::get('/deleteskill/{id}', [UserController::class, 'deleteskill'])->name('deleteskill');
     Route::post('/addexperience', [UserController::class, 'addexperience'])->name('addexperience');
     Route::get('/deleteexperience/{id}', [UserController::class, 'deleteexperience'])->name('deleteexperience');
+    Route::get('/deleteeducation/{id}', [UserController::class, 'deleteeducation'])->name('deleteeducation');
     Route::post('/addeducation', [UserController::class, 'addeducation'])->name('addeducation');
     Route::post('/saveprofile', [UserController::class, 'saveprofile'])->name('saveprofile');
     Route::get('/applications', [ApplicationController::class, 'userapplications'])->name('applications');
@@ -143,6 +144,14 @@ Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     });
 // ############### Admin Comment ##################
     Route::prefix('/comment')->name('comment.')->controller(CommentController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/show/{id}', 'show')->name('show');
+        Route::get('/destroy/{id}', 'destroy')->name('destroy');
+
+    });
+// ############### Admin Application ##################
+    Route::prefix('/application')->name('application.')->controller(ApplicationController::class)->group(function () {
         Route::get('/', 'index')->name('index');
         Route::post('/update/{id}', 'update')->name('update');
         Route::get('/show/{id}', 'show')->name('show');

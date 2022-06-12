@@ -120,7 +120,7 @@
                             </div>
                             <div class="mt-4">
                                 <div class="pxp-single-job-side-info-label pxp-text-light">Company size</div>
-                                <div class="pxp-single-job-side-info-data">{{$data->user->profiles->size}}</div>
+                                <div class="pxp-single-job-side-info-data">{{$data->user->profiles->company_size}}</div>
                             </div>
                             <div class="mt-4">
                                 <div class="pxp-single-job-side-info-label pxp-text-light">Founded in</div>

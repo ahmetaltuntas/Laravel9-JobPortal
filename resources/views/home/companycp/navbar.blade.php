@@ -3,7 +3,7 @@
 
 <div class="pxp-dashboard-side-panel d-none d-lg-block">
     <div class="pxp-logo">
-        <a href="{{route('companycp.index')}}" class="pxp-animate"><span style="color: var(--pxpMainColor)">J</span>ob<span style="color: var(--pxpMainColor)">P</span>ortal</a>
+        <a href="{{route('home')}}" class="pxp-animate"><span style="color: var(--pxpMainColor)">J</span>ob<span style="color: var(--pxpMainColor)">P</span>ortal</a>
     </div>
 
     <nav class="mt-3 mt-lg-4 d-flex justify-content-between flex-column pb-100">
@@ -14,7 +14,6 @@
             <li @if(basename($_SERVER['REQUEST_URI'])=="newjob") class="pxp-active" @endif><a href="{{route('companycp.newjob')}}"><span class="fa fa-file-text-o"></span>New Job Offer</a></li>
             <li @if(basename($_SERVER['REQUEST_URI'])=="jobs") class="pxp-active" @endif><a href="{{route('companycp.jobs')}}"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
             <li @if(basename($_SERVER['REQUEST_URI'])=="candidates") class="pxp-active" @endif><a href="{{route('companycp.candidates')}}"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
-            <li><a href="company-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
         </ul>
     </nav>
 

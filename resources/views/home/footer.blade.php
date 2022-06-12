@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-6 col-xl-5 col-xxl-4 mb-4">
                     <div class="pxp-footer-logo">
-                        <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">J</span>ob<span style="color: var(--pxpMainColor)">P</span>ortal</a>
+                        <a href="{{route('home')}}" class="pxp-animate"><span style="color: var(--pxpMainColor)">J</span>ob<span style="color: var(--pxpMainColor)">P</span>ortal</a>
                     </div>
                     <div class="pxp-footer-section mt-3 mt-md-4">
                         <h3>Call us</h3>
@@ -12,9 +12,8 @@
                     </div>
                     <div class="mt-3 mt-md-4 pxp-footer-section">
                         <div class="pxp-footer-text">
-                            90 Fifth Avenue, 3rd Floor<br>
-                            San Francisco, CA 1980<br>
-                            office@jobster.com
+                            Karabuk<br>
+                            ahmet34w@gmail.com
                         </div>
                     </div>
                 </div>
@@ -24,34 +23,17 @@
                             <div class="pxp-footer-section">
                                 <h3>For Candidates</h3>
                                 <ul class="pxp-footer-list">
-                                    <li><a href="jobs-list-1.html">Find Jobs</a></li>
-                                    <li><a href="candidate-dashboard.html">Candidate Dashboard</a></li>
-                                    <li><a href="candidate-dashboard-applications.html">My Applications</a></li>
-                                    <li><a href="candidate-dashboard-fav-jobs.html">Favourite Jobs</a></li>
-                                    <li><a href="candidate-dashboard-inbox.html">My inbox</a></li>
+                                    <li><a href="{{route('joblist')}}">Find Jobs</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-6 col-xl-4 col-xxl-3 mb-4">
-                            <div class="pxp-footer-section">
-                                <h3>For Employers</h3>
-                                <ul class="pxp-footer-list">
-                                    <li><a href="candidates-list-1.html">Find Candidates</a></li>
-                                    <li><a href="company-dashboard.html">Company Dashboard</a></li>
-                                    <li><a href="company-dashboard-new-job.html">Post a Job</a></li>
-                                    <li><a href="company-dashboard-jobs.html">Manage Jobs</a></li>
-                                    <li><a href="company-dashboard-candidates.html">Candidates</a></li>
-                                </ul>
-                            </div>
-                        </div>
+
                         <div class="col-md-6 col-xl-4 col-xxl-3 mb-4">
                             <div class="pxp-footer-section">
                                 <h3>About Us</h3>
                                 <ul class="pxp-footer-list">
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="pricing.html">Pricing</a></li>
-                                    <li><a href="blog-list-1.html">Blog</a></li>
-                                    <li><a href="blog-list-1.html">Contact Us</a></li>
+                                    <li><a href="{{route('aboutus')}}">About Us</a></li>
+                                    <li><a href="{{route('contactus')}}">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -59,10 +41,10 @@
                             <div class="pxp-footer-section">
                                 <h3>Helpful Resources</h3>
                                 <ul class="pxp-footer-list">
-                                    <li><a href="faqs.html">FAQs</a></li>
-                                    <li><a href="sign-in.html">Sign In</a></li>
-                                    <li><a href="sign-up.html">Sign Up</a></li>
-                                    <li><a href="404.html">404 Page</a></li>
+                                    <li><a href="{{route('faqs')}}">FAQs</a></li>
+                                    <li><a href="{{route('sign-in')}}">Sign In</a></li>
+                                    <li><a href="{{route('sign-up')}}">Sign Up</a></li>
+                                    <li><a href="{{route('notfound')}}">404 Page</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -75,17 +57,7 @@
         <div class="pxp-container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-auto">
-                    <div class="pxp-footer-copyright pxp-text-light">© 2021 Jobster. All Right Reserved.</div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="pxp-footer-social mt-3 mt-lg-0">
-                        <ul class="list-unstyled">
-                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                        </ul>
-                    </div>
+                    <div class="pxp-footer-copyright pxp-text-light">© 2022 JobPortal. All Right Reserved.</div>
                 </div>
             </div>
         </div>
@@ -120,7 +92,7 @@
                         <a href="#" class="pxp-modal-link">Forgot password</a>
                     </div>
                     <div class="mt-4 text-center pxp-modal-small">
-                        New to Jobster? <a role="button" class="" data-bs-target="#pxp-signup-modal" data-bs-toggle="modal" data-bs-dismiss="modal">Create an account</a>
+                        New to JobPortal? <a role="button" class="" data-bs-target="#pxp-signup-modal" data-bs-toggle="modal" data-bs-dismiss="modal">Create an account</a>
                     </div>
                 </form>
             </div>
@@ -152,12 +124,12 @@
                         <span class="fa fa-envelope-o"></span>
                     </div>
                     <div class="form-floating mb-3">
-                        <input  class="form-control" id="password" type="password" name="password" required="required" autocomplete="new-password">
+                        <input  class="form-control" id="password" minlength="8" type="password" name="password" required="required" autocomplete="new-password">
                         <label class="pxp-signup-page-password" for="password">Password</label>
                         <span class="fa fa-lock"></span>
                     </div>
                     <div class="form-floating mb-3">
-                        <input  class="form-control" id="password_confirmation" type="password" name="password_confirmation" required="required" autocomplete="new-password">
+                        <input  class="form-control" id="password_confirmation" minlength="8" type="password" name="password_confirmation" required="required" autocomplete="new-password">
                         <label class="pxp-signup-page-password" for="password_confirmation">Confirm Password</label>
                         <span class="fa fa-lock"></span>
                     </div>
