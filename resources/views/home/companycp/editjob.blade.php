@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-md-6 col-xxl-3">
                     <label for="pxp-company-job-location" class="form-label">Location</label>
-                    <input type="text" id="pxp-company-job-location" name="location" class="form-control" value="{{$data->address}}" placeholder="E.g. San Francisco, CA">
+                    <input type="text" id="pxp-company-job-location" name="location" class="form-control" value="{{$data->location}}" placeholder="E.g. San Francisco, CA">
                 </div>
                 <div class="col-md-6 col-xxl-3">
                     <div class="mb-3">

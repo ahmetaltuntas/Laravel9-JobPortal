@@ -59,6 +59,15 @@
                 <div class="col-lg-auto">
                     <div class="pxp-footer-copyright pxp-text-light">© 2022 JobPortal. All Right Reserved.</div>
                 </div>
+                <div class="col-lg-auto">
+                    <div class="pxp-footer-social mt-3 mt-lg-0">
+                        <ul class="list-unstyled">
+                            <li><a href="{{$settings->facebook}}"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="{{$settings->twitter}}"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="{{$settings->instagram}}"><span class="fa fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

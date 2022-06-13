@@ -37,7 +37,6 @@
                                     </div>
                                     <div class="modal-body">
                                         <h5 class="modal-title text-center mt-4" id="signinModal">Apply Now</h5>
-
                                         @if (Auth::user()!=null)
 
                                             @php
@@ -80,7 +79,12 @@
                             </div>
                             <div class="col-auto">
                                 <div class="pxp-single-job-date pxp-text-light">{{$data->created_at}}</div>
+                                @php
+                                    $avg=$data->reviews->average('rate');
+                                @endphp
+                                <small>Rate : {{number_format($avg,1)}}</small>
                             </div>
+
                         </div>
 
                         <div class="pxp-single-job-content-details mt-4 mt-lg-5">
@@ -155,7 +159,7 @@
                                         @foreach($reviews as $rs)
                                         <li class="mt-3 mt-lg-4">
                                             <div class="pxp-comments-list-item">
-                                                <img src="@if($data->user->profiles->image == null) {{asset("assets/images/profile.png")}} @else {{Storage::url($data->user->profiles->image)}} @endif" alt="{{$rs->user->name}}">
+                                                <img src="@if($rs->user->profiles->image == null) {{asset("assets/images/profile.png")}} @else {{Storage::url($rs->user->profiles->image)}} @endif" alt="{{$rs->user->name}}">
                                                 <div class="pxp-comments-list-item-body">
                                                     <h5>{{$rs->user->name}}</h5>
                                                     <div class="pxp-comments-list-item-date">{{$rs->created_at}}</div>

@@ -75,9 +75,13 @@ class HomeController extends Controller
 
         $data=Job::find($id);
         $reviews= Comment::where('job_id',$id)->where('status','True')->get();
+        $settings= Setting::first();
+
         return view('home.job',[
             'data' => $data,
-            'reviews' => $reviews
+            'reviews' => $reviews,
+            'settings' => $settings,
+
         ]);
     }
     public function showprofile($id){
@@ -85,12 +89,15 @@ class HomeController extends Controller
         $data=User::find($id);
         $userRoles = $data->roles->pluck('name');
         $jobdata=Job::where('user_id','=',$id)->get();
+        $settings= Setting::first();
 
         if ($data!=null) {
             return view('home.showprofile', [
                 'data' => $data,
                 'userRoles' => $userRoles,
-                'jobdata'=>$jobdata
+                'jobdata'=>$jobdata,
+                'settings' => $settings
+
             ]);
         }
         else{
@@ -109,14 +116,22 @@ class HomeController extends Controller
                 if($request->category_id!='null'){
                     $parentId = $request->get('subcategory_id');
                     $jobdata = Job::where('category_id',$parentId)->where('title','LIKE','%'.$title.'%')->where('location','LIKE','%'.$loc.'%')->get();
+                    $settings= Setting::first();
+
                     return view('home.joblist',[
-                        'jobdata' => $jobdata
+                        'jobdata' => $jobdata,
+                        'settings' => $settings
+
                     ]);
                 }
                 elseif($request->category_id=='null'){
                     $jobdata = Job::where('location','LIKE','%'.$loc.'%')->where('title','LIKE','%'.$title.'%')->get();
+                    $settings= Setting::first();
+
                     return view('home.joblist',[
-                        'jobdata' => $jobdata
+                        'jobdata' => $jobdata,
+                        'settings' => $settings
+
                     ]);
                 }
             }
@@ -124,14 +139,23 @@ class HomeController extends Controller
                 if($request->category_id!='null'){
                     $parentId = $request->get('subcategory_id');
                     $jobdata = Job::where('category_id',$parentId)->where('title','LIKE','%'.$title.'%')->get();
+                    $settings= Setting::first();
+
                     return view('home.joblist',[
-                        'jobdata' => $jobdata
+                        'jobdata' => $jobdata,
+                        'settings' => $settings
+
+
                     ]);
                 }
                 elseif($request->category_id=='null'){
                     $jobdata = Job::where('title','LIKE','%'.$title.'%')->get();
+                    $settings= Setting::first();
+
                     return view('home.joblist',[
-                        'jobdata' => $jobdata
+                        'jobdata' => $jobdata,
+                        'settings' => $settings
+
                     ]);
                 }
             }
@@ -143,14 +167,22 @@ class HomeController extends Controller
                 if($request->category_id!='null'){
                     $parentId = $request->get('subcategory_id');
                     $jobdata = Job::where('category_id',$parentId)->where('location','LIKE','%'.$loc.'%')->get();
+                    $settings= Setting::first();
+
                     return view('home.joblist',[
-                        'jobdata' => $jobdata
+                        'jobdata' => $jobdata,
+                        'settings' => $settings
+
                     ]);
                 }
                 elseif($request->category_id=='null'){
                     $jobdata = Job::where('location','LIKE','%'.$loc.'%')->get();
+                    $settings= Setting::first();
+
                     return view('home.joblist',[
-                        'jobdata' => $jobdata
+                        'jobdata' => $jobdata,
+                        'settings' => $settings
+
                     ]);
                 }
             }
@@ -158,14 +190,22 @@ class HomeController extends Controller
                 if($request->category_id!='null'){
                     $parentId = $request->get('subcategory_id');
                     $jobdata = Job::where('category_id',$parentId)->get();
+                    $settings= Setting::first();
+
                     return view('home.joblist',[
-                        'jobdata' => $jobdata
+                        'jobdata' => $jobdata,
+                        'settings' => $settings
+
                     ]);
                 }
                 elseif($request->category_id=='null'){
                     $jobdata = Job::all();
+                    $settings= Setting::first();
+
                     return view('home.joblist',[
-                        'jobdata' => $jobdata
+                        'jobdata' => $jobdata,
+                        'settings' => $settings
+
                     ]);
                 }
             }
@@ -173,9 +213,12 @@ class HomeController extends Controller
         }
         else{
             $jobdata=Job::all();
+            $settings= Setting::first();
 
             return view('home.joblist',[
-                'jobdata' => $jobdata
+                'jobdata' => $jobdata,
+                'settings' => $settings
+
             ]);
         }
     }
@@ -198,19 +241,35 @@ class HomeController extends Controller
     }
     public function faqs(){
         $setting= Faq::all();
+        $settings= Setting::first();
 
         return view('home.faqs',[
-            'setting' => $setting
+            'setting' => $setting,
+            'settings' => $settings
         ]);
     }
     public function signin(){
-        return view('home.sign-in');
+        $settings= Setting::first();
+
+        return view('home.sign-in',[
+            'settings' => $settings
+        ]);
     }
     public function signup(){
-        return view('home.sign-up');
+        $settings= Setting::first();
+
+        return view('home.sign-up',[
+            'settings' => $settings
+
+        ]);
     }
     public function contactus(){
-        return view('home.contactus');
+        $settings= Setting::first();
+
+        return view('home.contactus',[
+            'settings' => $settings
+
+        ]);
     }
     public function storemessage(Request $request){
         $data = new Message();
